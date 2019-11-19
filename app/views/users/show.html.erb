@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 class="">Hello</h1>
+  <h1 class="">Hello <%= @user.first_name %></h1>
 
   <table class="table mt-5">
   <thead>
@@ -13,6 +13,20 @@
       <th scope="row">Email</th>
       <td><%= @user.email %></td>
     </tr>
+
+    <tr>
+      <th scope="row">First Name</th>
+      <td><%= @user.first_name %></td>
+    </tr>
+
+    <tr>
+      <th scope="row">Last Name</th>
+      <td><%= @user.last_name %></td>
+    </tr>
   </tbody>
 </table>
 </div>
+
+
+
+
