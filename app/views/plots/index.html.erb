@@ -1,10 +1,10 @@
 <%= render 'layouts/shared/banner' %>
-<div class="card-product">
-  <img src="https://www.salemstones.com/wp-content/uploads/2018/07/Grey-mausoleum-with-bronze-door.jpg"/>
-  <div class="card-product-infos">
-    <% @plots.each do |plot| %>
-    <h2><%= plot.name %></h2>
-    <p><%= plot.description %></p>
-    <% end %>
-  </div>
+<% @plots.each do |plot| %>
+  <div class="card-product">
+    <img src="https://www.salemstones.com/wp-content/uploads/2018/07/Grey-mausoleum-with-bronze-door.jpg"/>
+    <div class="card-product-infos">
+      <h2><%= plot.name %></h2>
+      <p><%= plot.description %></p>
+    </div>
 </div>
+<% end %>
