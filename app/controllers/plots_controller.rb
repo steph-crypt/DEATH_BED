@@ -1,6 +1,6 @@
 class PlotsController < ApplicationController
 
   def show
-    @plots = Plots.find(params[:id])
+    @plot = Plot.find(params[:id])
   end
 end
