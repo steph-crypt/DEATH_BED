@@ -8,4 +8,8 @@ class PlotsController < ApplicationController
   # def plot_params
   #   params.require(:user).permit(:name)
   # end
+
+  def show
+    @plot = Plot.find(params[:id])
+  end
 end
