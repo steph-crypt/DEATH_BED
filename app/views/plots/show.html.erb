@@ -1,0 +1,6 @@
+<h1><%= @plot.name %></h1>
+  <% @user.plots.each do |p| %>
+    <%= p.photo %>
+    <p><%= p.description %></p>
+
+  <% end %>
