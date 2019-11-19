@@ -1,0 +1,6 @@
+<h1><%= @plot.name %></h1>
+  <% @user.plots.each do |p| %>
+    <p><%= cl_image_tag(p.photo) %></p>
+    <p><%= p.description %></p>
+
+  <% end %>
