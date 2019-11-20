@@ -9,7 +9,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     @booking.user = current_user
     @booking.plot = @plot
-    if @booking.save!
+    if @booking.save
       redirect_to @plot
     else
       render :new
