@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
   def create
     @plot = Plot.find(params[:plot_id])
     @booking = Booking.new(booking_params)
-    @booking.ploat = @plot
+    @booking.plot = @plot
     if @booking.save
       redirect_to plot_path(@plot)
     else
@@ -17,6 +17,6 @@ class BookingsController < ApplicationController
     private
 
   def booking_params
-    params.require(:booking).permit(:description)
+    params.require(:booking).permit(:plot_id, :user_id)
   end
 end
