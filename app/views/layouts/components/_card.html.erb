@@ -3,6 +3,9 @@
   <div class="card-product-infos">
     <h2>Product name</h2>
     <p>Product description with <strong>relevant info</strong> only.</p>
+    <% @plots.each do |plot| %>
+      <%= plot.name %>
+    <% end %>
   </div>
 </div>
 
