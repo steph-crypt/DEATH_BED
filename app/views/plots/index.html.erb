@@ -3,15 +3,15 @@
   <h1>Available Plots in Your Area</h1>
   <div class="row">
     <% @plots.each do |plot| %>
-    <div class="col-sx-12 col-sm-6 col-md-4 col-lg-4">
-      <div class="card-product">
-        <img src="https://www.salemstones.com/wp-content/uploads/2018/07/Grey-mausoleum-with-bronze-door.jpg"/>
-        <div class="card-product-infos">
-          <h2><%= plot.name %></h2>
-          <p><%= plot.description %></p>
+      <div class="col-sx-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="card-product">
+          <img src="https://www.salemstones.com/wp-content/uploads/2018/07/Grey-mausoleum-with-bronze-door.jpg"/>
+          <div class="card-product-infos">
+            <h2><%= link_to plot.name, plot_path(plot) %></h2>
+            <p><%= plot.description.truncate(90) %></p>
+          </div>
         </div>
       </div>
-    </div>
     <% end %>
   </div>
 </div>
