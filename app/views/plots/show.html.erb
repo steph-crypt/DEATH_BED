@@ -1,19 +1,19 @@
 <div class="container">
-  <div class="d-flex justify-content-center">
-    <div class="photo">
-      <% @user.plots.each do |p| %>
-        <p><%= cl_image_tag(p.photo) %></p>
-    </div>
-    <div class="card bg-light col-6 p-5 pb-1">
-      <div class="name">
-      <h1><%= @plot.name %></h1>
-    </div>
-        <p><strong>Plot Description: </strong> <%= p.description %></p>
-        <p><%= link_to "Book Listing", new_plot_path(@plot[:id]) %></p>
-        <p><%= link_to "Plots List", plots_path %></p>
-      </p>
-      </div>
-    </div>
-    <% end %>
-  </div>
-</div>
+   <div class="d-flex justify-content-center">
+     <div class="photo">
+       <% @user.plots.each do |p| %>
+         <p><%= cl_image_tag(p.photo) %></p>
+     </div>
+     <div class="card bg-light col-6 p-5 pb-1">
+       <div class="name">
+       <h1><%= @plot.name %></h1>
+     </div>
+         <p><strong>Plot Description: </strong> <%= p.description %></p>
+         <p><%= link_to "Book Listing", new_plot_path(@plot[:id]) %></p>
+         <p><%= link_to "Plots List", plots_path %></p>
+       </p>
+       </div>
+     </div>
+     <% end %>
+   </div>
+ </div>
