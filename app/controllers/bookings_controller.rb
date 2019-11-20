@@ -1,4 +1,9 @@
 class BookingsController < ApplicationController
+  def index
+    @bookings = Booking.all
+    @bookings = @bookings.where(user: current_user)
+  end
+
   def new
     @plot = Plot.find(params[:plot_id])
     @booking = Booking.new
