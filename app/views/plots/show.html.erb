@@ -10,8 +10,14 @@
           <h1><%= @plot.name %></h1>
         </div>
         <p><strong>Plot Description: </strong> <%= p.description %></p>
-        <p><%= link_to "Book Plot", new_plot_booking_path(@plot[:id]) %></p>
-        <p><%= link_to "Plots List", plots_path %></p>
+          <% if user_signed_in? %>
+            <%= link_to "Book Plot", new_plot_booking_path(@plot[:id]), class:"btn btn-secondary" %>
+          <% else %>
+            <%= link_to "Book Plot", new_user_registration_path, class:"btn btn-secondary" %>
+          <% end %>
+
+        </br>
+        <p><%= link_to "Back to all plots", plots_path %></p>
       </div>
     <% end %>
 
