@@ -9,7 +9,7 @@
       <h1><%= @plot.name %></h1>
     </div>
         <p><strong>Plot Description: </strong> <%= p.description %></p>
-        <p><%= link_to "Book Listing", new_plot_path(@plot[:id]) %></p>
+        <p><%= link_to "Book Plot", new_plot_booking_path(@plot[:id]) %></p>
         <p><%= link_to "Plots List", plots_path %></p>
       </p>
       </div>
@@ -17,3 +17,5 @@
     <% end %>
   </div>
 </div>
+
+<!-- add button to link to booking -->
