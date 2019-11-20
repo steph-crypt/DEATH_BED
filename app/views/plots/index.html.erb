@@ -6,7 +6,7 @@
 
         <div class="col-sx-12 col-sm-6 col-md-4 col-lg-4">
           <div class="card-product">
-            <img src="https://www.salemstones.com/wp-content/uploads/2018/07/Grey-mausoleum-with-bronze-door.jpg"/>
+            <%= cl_image_tag(plot.photo) %>
             <div class="card-product-infos">
               <h2><%= link_to plot.name, plot_path(plot) %></h2>
               <p><%= plot.description.truncate(90) %></p>
