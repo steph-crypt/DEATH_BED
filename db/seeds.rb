@@ -61,7 +61,7 @@ p1.user = u1
 p2.user = u2
 p3.user = u3
 
-photo_url = "https://i.pinimg.com/originals/2e/19/c3/2e19c3b744304733eda8ebf2bdd5689b.jpg"
+photo_url = "https://media-cdn.tripadvisor.com/media/photo-s/0a/ba/95/ae/beautiful-mausoleum.jpg"
 p1.remote_photo_url = photo_url
 p1.save!
 
@@ -69,7 +69,7 @@ photo_url = "https://i.pinimg.com/originals/2e/19/c3/2e19c3b744304733eda8ebf2bdd
 p2.remote_photo_url = photo_url
 p2.save!
 
-photo_url = "https://i.pinimg.com/originals/2e/19/c3/2e19c3b744304733eda8ebf2bdd5689b.jpg"
+photo_url = "https://i.pinimg.com/564x/71/e5/03/71e503fae4cda7493c34e18795c9e32c.jpg"
 p3.remote_photo_url = photo_url
 p3.save!
 
