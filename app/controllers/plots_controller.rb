@@ -12,6 +12,7 @@ class PlotsController < ApplicationController
 
   def new
     @plot = Plot.new
+    authorize @plot
   end
 
   def create
