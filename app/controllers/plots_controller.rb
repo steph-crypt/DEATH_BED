@@ -1,11 +1,12 @@
 class PlotsController < ApplicationController
   def index
-    @plots = Plot.all
+    @plots = policy_scope(Plot).order(created_at: :desc)
   end
 
   def show
     @plot = Plot.geocoded.find(params[:id])
-    # @user = @plot.user
+    @user = @plot.user
+    authorize @plot
     @markers = [{ lat: @plot.latitude, lng: @plot.longitude }]
   end
 
@@ -14,6 +15,7 @@ class PlotsController < ApplicationController
   end
 
   def create
+    authorize @plot
     @plot = Plot.new(plot_params)
     @plot.user_id = current_user.id
     if @plot.save
@@ -21,6 +23,15 @@ class PlotsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @plot = Plot.find(params[:id])
+  end
+
+  def update
+    @plot = Plot.find(params[:id])
+    @plot.update(params[:plot])
   end
 
   private

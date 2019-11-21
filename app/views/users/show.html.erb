@@ -26,8 +26,46 @@
     </tbody>
   </table>
 
- <%= render template: 'devise/registrations/edit' %>
+  <%= link_to "Edit Profile", edit_user_registration_path(@user[:id]) %>
+
+  <div>
+    <h1>Your bookings</h1>
+    <div class="row">
+      <% @bookings.each do |booking| %>
+         <div class="col-sx-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="card-product">
+              <%= cl_image_tag booking.plot.photo %>
+              <div class="card-product-infos">
+                <h2><%= link_to booking.plot.name, plot_path(booking.plot) %></h2>
+                <p>Date</p>
+                <p><%= booking.plot.description.truncate(90) %></p>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div>
+    <h1>Your listings</h1>
+    <div class="row">
+      <% @bookings.each do |booking| %>
+         <div class="col-sx-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="card-product">
+              <%= cl_image_tag booking.plot.photo %>
+              <div class="card-product-infos">
+                <h2><%= link_to booking.plot.name, plot_path(booking.plot) %></h2>
+                <p>Date</p>
+                <p><%= booking.plot.description.truncate(90) %></p>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+  </div>
 
 </div>
+
 
 
