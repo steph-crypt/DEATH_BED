@@ -16,6 +16,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+#gm for date picker
+
 #gem for picture upload
 gem 'cloudinary', '~>1.9.1'
 gem 'carrierwave', '~> 1.2'
