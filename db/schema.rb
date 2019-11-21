@@ -34,6 +34,9 @@ ActiveRecord::Schema.define(version: 2019_11_21_120413) do
     t.string "photo"
     t.float "latitude"
     t.float "longitude"
+    t.integer "price"
+    t.string "cementary_name"
+    t.string "location"
     t.index ["user_id"], name: "index_plots_on_user_id"
   end
 
