@@ -16,6 +16,9 @@
       </li>
 
   <% if user_signed_in? %>
+      <li class="nav-item">
+         <%= link_to "Add a Plot", new_plot_path,  class:"nav-link" %>
+      </li>
     <% else %>
       <li class="nav-item">
          <%= link_to "Sign In", new_user_session_path,  class:"nav-link" %>

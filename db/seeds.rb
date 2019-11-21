@@ -37,7 +37,7 @@ Was that night on the marge of Lake Lebarge when I cremated Sam McGee.
 Now Sam McGee was from Tennessee, where the cotton blooms and blows.
 Why he left his home in the South to roam 'round the Pole, God only knows.
 He was always cold, but the land of gold seemed to hold him like a spell;
-Though he'd often say in his homely way that 'he'd sooner live in hell.'")
+Though he'd often say in his homely way that 'he'd sooner live in hell.'", location:"Berlin, Germany")
 
 p2 = Plot.new(name: "Eternal Sunshine", description: "There are strange things done in the midnight sun
 By the men who moil for gold; The Arctic trails have their secret tales that would make your blood run cold;
@@ -46,7 +46,7 @@ Was that night on the marge of Lake Lebarge when I cremated Sam McGee.
 Now Sam McGee was from Tennessee, where the cotton blooms and blows.
 Why he left his home in the South to roam 'round the Pole, God only knows.
 He was always cold, but the land of gold seemed to hold him like a spell;
-Though he'd often say in his homely way that 'he'd sooner live in hell.'")
+Though he'd often say in his homely way that 'he'd sooner live in hell.'", location:"Munich, Germany")
 
 p3 = Plot.new(name: "Buried Alive", description: "There are strange things done in the midnight sun
 By the men who moil for gold; The Arctic trails have their secret tales that would make your blood run cold;
@@ -55,7 +55,7 @@ Was that night on the marge of Lake Lebarge when I cremated Sam McGee.
 Now Sam McGee was from Tennessee, where the cotton blooms and blows.
 Why he left his home in the South to roam 'round the Pole, God only knows.
 He was always cold, but the land of gold seemed to hold him like a spell;
-Though he'd often say in his homely way that 'he'd sooner live in hell.'")
+Though he'd often say in his homely way that 'he'd sooner live in hell.'", location:"Hamburg, Germany")
 
 p1.user = u1
 p2.user = u2
