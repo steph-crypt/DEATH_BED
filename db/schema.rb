@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2019_11_21_103154) do
     t.string "photo"
     t.integer "price"
     t.string "cementary_name"
-    t.string "address"
+    t.string "location"
     t.index ["user_id"], name: "index_plots_on_user_id"
   end
 
