@@ -10,8 +10,10 @@
             <%= cl_image_tag booking.plot.photo %>
             <div class="card-product-infos">
               <h2><%= link_to booking.plot.name, plot_path(booking.plot) %></h2>
-              <p>Date</p>
-              <p><%= booking.plot.description.truncate(90) %></p>
+              <p> <strong>Start Date:</strong> <%= booking.start_date %></p>
+              <!-- <p><%= booking.plot.description.truncate(90) %></p> -->
+              <p><%= link_to "Modify Booking", edit_booking_path(booking) %></p>
+              <p><%= link_to "Cancel Booking", booking_path(booking),  method: :delete %></p>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+
   def index
     @bookings = Booking.all
     @bookings = @bookings.where(user: current_user)
@@ -21,9 +22,32 @@ class BookingsController < ApplicationController
     end
   end
 
+  def edit
+    set_booking
+  end
+
+  def update
+    set_booking
+    if @booking.update(booking_params)
+      redirect_to bookings_path, notice: "Booking was successfully updated"
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    set_booking
+    @booking.destroy
+    redirect_to bookings_path, notice: "Booking was successfully canceled"
+  end
+
   private
 
   def booking_params
     params.require(:booking).permit(:start_date)
+  end
+
+  def set_booking
+    @booking = Booking.find(params[:id])
   end
 end
