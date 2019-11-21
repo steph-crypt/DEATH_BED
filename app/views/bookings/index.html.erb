@@ -5,13 +5,17 @@
   <div class="row">
     <% @bookings.each do |booking| %>
 
-        <div class="col-sx-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="col-sx-12 col-sm-6 col-md-6 col-lg-4">
           <div class="card-product">
             <%= cl_image_tag booking.plot.photo %>
             <div class="card-product-infos">
               <h2><%= link_to booking.plot.name, plot_path(booking.plot) %></h2>
-              <p>Date</p>
-              <p><%= booking.plot.description.truncate(90) %></p>
+              <p> <strong>Start Date:</strong> <%= booking.start_date %></p>
+              <!-- <p><%= booking.plot.description.truncate(90) %></p> -->
+              <div class="current-booking-options">
+                <p><%= link_to "Modify", edit_booking_path(booking) %></p>
+                <p><%= link_to "Cancel", booking_path(booking),  method: :delete %></p>
+              </div>
             </div>
           </div>
         </div>
