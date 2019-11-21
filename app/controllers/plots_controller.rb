@@ -4,10 +4,10 @@ class PlotsController < ApplicationController
   end
 
   def show
-    @plot = Plot.find(params[:id])
+    @plot = Plot.geocoded.find(params[:id])
     @user = @plot.user
-    raise
     authorize @plot
+    @markers = [{ lat: @plot.latitude, lng: @plot.longitude }]
   end
 
   def new
@@ -17,6 +17,7 @@ class PlotsController < ApplicationController
   def create
     authorize @plot
     @plot = Plot.new(plot_params)
+    @plot.user_id = current_user.id
     if @plot.save
       redirect_to plot_path(@plot)
     else
@@ -32,9 +33,10 @@ class PlotsController < ApplicationController
     @plot = Plot.find(params[:id])
     @plot.update(params[:plot])
   end
-  # private
+
+  private
 
   def plot_params
-    params.require(:user).permit(:name)
+    params.require(:plot).permit(:name, :cementary_name, :description, :address, :price, :photo)
   end
 end
