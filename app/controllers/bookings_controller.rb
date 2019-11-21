@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.plot = @plot
     if @booking.save!
-      redirect_to @plot
+      redirect_to bookings_path
     else
       render :new
     end
