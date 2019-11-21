@@ -4,8 +4,9 @@ class PlotsController < ApplicationController
   end
 
   def show
-    @plot = Plot.find(params[:id])
-    @user = @plot.user
+    @plot = Plot.geocoded.find(params[:id])
+    # @user = @plot.user
+    @markers = [{ lat: @plot.latitude, lng: @plot.longitude }]
   end
 
   def new
