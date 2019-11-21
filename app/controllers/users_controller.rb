@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def show
     set_user
+    @bookings = Booking.where(user_id: @user)
   end
 
   def edit
