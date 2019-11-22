@@ -9,6 +9,7 @@
         <div class="name">
           <h1><%= @plot.name %></h1>
         </div>
+          <h2>$<%= @plot.price %> per 10 Years</h2>
         <p><strong>Plot Description: </strong> <%= @plot.description %></p>
           <% if user_signed_in? %>
             <%= link_to "Book Plot", new_plot_booking_path(@plot[:id]), class:"btn btn-secondary" %>
