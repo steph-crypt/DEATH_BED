@@ -17,6 +17,8 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.plot = @plot
+    @rent_range = @booking.date_range
+    @booking.end_date = @booking.start_date.next_year(@rent_range)
     if @booking.save
       redirect_to @plot
     else
@@ -47,7 +49,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date)
+    params.require(:booking).permit(:start_date, :date_range)
   end
 
   def set_booking
