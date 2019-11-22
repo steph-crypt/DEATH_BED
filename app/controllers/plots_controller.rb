@@ -3,6 +3,11 @@ class PlotsController < ApplicationController
 
   def index
     @plots = policy_scope(Plot).order(created_at: :desc)
+    if params[:query].present?
+        @plots = Plot.where(name: params[:query])
+      else
+        @plots = Plot.all
+    end
   end
 
   def show
@@ -10,6 +15,20 @@ class PlotsController < ApplicationController
     authorize @plot
     @user = @plot.user
     @markers = [{ lat: @plot.latitude, lng: @plot.longitude }]
+     if params[:query].present?
+      sql_query = " \
+        Plots.name @@ :query \
+        OR Plots.description @@ :query \
+        OR Plots.price @@ :query \
+        OR Plots.location @@ :query \
+        OR Plots.denomination @@ :query \
+        OR Plots.location @@ :query \
+        OR Plots.cementary_name @@ :query \
+      "
+      @Plots = Plot.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @Plots = Plot.all
+    end
   end
 
   def new
