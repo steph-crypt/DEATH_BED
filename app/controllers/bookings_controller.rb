@@ -6,7 +6,6 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
     @bookings = @bookings.where(user: current_user)
     authorize @bookings
-    @price = @booking.plot.price
   end
 
   def new
@@ -35,9 +34,10 @@ class BookingsController < ApplicationController
 
   def update
     set_booking
+    @plot = @booking.plot
     authorize @booking
     if @booking.update(booking_params)
-      redirect_to bookings_path, notice: "Booking was successfully updated"
+      redirect_to user_path(current_user), notice: "Booking was successfully updated"
     else
       render :edit
     end
@@ -46,7 +46,7 @@ class BookingsController < ApplicationController
   def destroy
     set_booking
     @booking.destroy
-    redirect_to bookings_path, notice: "Booking was successfully canceled"
+    redirect_to user_path(current_user), notice: "Booking was successfully canceled"
     authorize @booking
   end
 
