@@ -2,9 +2,10 @@ class BookingsController < ApplicationController
   skip_after_action :verify_authorized, only: [:new, :create]
 
   def index
+    @bookings = policy_scope(Booking).order(created_at: :desc)
     @bookings = Booking.all
     @bookings = @bookings.where(user: current_user)
-    authorize @booking
+    authorize @bookings
   end
 
   def new
@@ -26,6 +27,7 @@ class BookingsController < ApplicationController
 
   def edit
     set_booking
+    authorize @booking
   end
 
   def update
@@ -42,6 +44,7 @@ class BookingsController < ApplicationController
     set_booking
     @booking.destroy
     redirect_to bookings_path, notice: "Booking was successfully canceled"
+    authorize @booking
   end
 
   private
