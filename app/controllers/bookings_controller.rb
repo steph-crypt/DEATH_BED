@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
     @bookings = @bookings.where(user: current_user)
     authorize @bookings
+    @price = @booking.plot.price
   end
 
   def new

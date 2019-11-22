@@ -38,6 +38,7 @@
             <div class="card-product-infos">
               <h2><%= link_to booking.plot.name, plot_path(booking.plot) %></h2>
               <p> <strong>Start Date:</strong> <%= booking.start_date %></p>
+              <p><strong>Total Price:</strong> $<%= booking.plot.price * (booking.date_range / 10) %></p>
               <div class="current-booking-options">
                 <p><%= link_to "Modify", edit_booking_path(booking) %></p>
                 <p><%= link_to "Cancel", booking_path(booking),  method: :delete %></p>
@@ -56,7 +57,7 @@
               <%= cl_image_tag plot.photo %>
               <div class="card-product-infos">
                 <h2><%= link_to plot.name, plot_path(plot) %></h2>
-                <p><%= plot.description.truncate(90)%></p>
+                <p><strong>Price per 10 Years:</strong> $<%= plot.price %></p>
                 <div class="current-booking-options">
                 <p><%= link_to "Modify", edit_plot_path(plot) %></p>
                 <p><%= link_to "Remove", plot_path(plot),  method: :delete %></p>
