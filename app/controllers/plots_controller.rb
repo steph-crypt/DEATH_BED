@@ -4,17 +4,16 @@ class PlotsController < ApplicationController
     @plots = policy_scope(Plot).order(created_at: :desc)
     if params[:query].present?
       sql_query = " \
-        Plots.name @@ :query \
-        OR Plots.description @@ :query \
-        OR Plots.price @@ :query \
-        OR Plots.location @@ :query \
-        OR Plots.denomination @@ :query \
-        OR Plots.location @@ :query \
-        OR Plots.cementary_name @@ :query \
+        plots.name @@ :query \
+        OR plots.description @@ :query \
+        OR plots.location @@ :query \
+        OR plots.denomination @@ :query \
+        OR plots.location @@ :query \
+        OR plots.cementary_name @@ :query \
       "
-      @Plots = Plot.where(sql_query, query: "%#{params[:query]}%")
+      @plots = Plot.where(sql_query, query: "%#{params[:query]}%")
     else
-      @Plots = Plot.all
+      @plots = Plot.all
     end
   end
 
@@ -23,20 +22,6 @@ class PlotsController < ApplicationController
     authorize @plot
     @user = @plot.user
     @markers = [{ lat: @plot.latitude, lng: @plot.longitude }]
-     if params[:query].present?
-      sql_query = " \
-        Plots.name @@ :query \
-        OR Plots.description @@ :query \
-        OR Plots.price @@ :query \
-        OR Plots.location @@ :query \
-        OR Plots.denomination @@ :query \
-        OR Plots.location @@ :query \
-        OR Plots.cementary_name @@ :query \
-      "
-      @Plots = Plot.where(sql_query, query: "%#{params[:query]}%")
-    else
-      @Plots = Plot.all
-    end
   end
 
   def new
