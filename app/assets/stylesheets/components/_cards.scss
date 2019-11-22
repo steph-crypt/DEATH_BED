@@ -2,11 +2,12 @@
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   margin: 10px 5px;
-  border-radius: 5px;
+  // border-radius: 5px;
+
 }
 
 .card-product img {
@@ -27,6 +28,13 @@
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+}
+
+
+.card-product a {
+    color: #898d92;
+    text-decoration: none;
+    background-color: transparent;
 }
 
 .card-product .card-product-infos {
