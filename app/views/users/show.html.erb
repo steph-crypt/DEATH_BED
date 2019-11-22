@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 class="">Hello <%= @user.first_name %></h1>
+  <h1 class="">Hello <%= current_user.first_name %></h1>
 
   <table class="table mt-5">
     <thead>
@@ -11,26 +11,26 @@
     <tbody>
       <tr>
         <th scope="row">Email</th>
-        <td><%= @user.email %></td>
+        <td><%= current_user.email %></td>
       </tr>
 
       <tr>
         <th scope="row">First Name</th>
-        <td><%= @user.first_name %></td>
+        <td><%= current_user.first_name %></td>
       </tr>
 
       <tr>
         <th scope="row">Last Name</th>
-        <td><%= @user.last_name %></td>
+        <td><%= current_user.last_name %></td>
       </tr>
     </tbody>
   </table>
 
-  <%= link_to "Edit Profile", edit_user_registration_path(@user[:id]) %>
+  <%= link_to "Edit Profile", edit_user_registration_path(current_user[:id]) %>
 
   <h1>Your bookings</h1>
   <div class="row">
-    <% @bookings.each do |booking| %>
+    <% current_user.bookings.each do |booking| %>
 
         <div class="col-sx-12 col-sm-6 col-md-6 col-lg-4">
           <div class="card-product">
@@ -50,20 +50,28 @@
 
   <h1>Your listings</h1>
     <div class="row">
-      <% @bookings.each do |booking| %>
+      <% current_user.plots.each do |plot| %>
          <div class="col-sx-12 col-sm-6 col-md-4 col-lg-4">
             <div class="card-product">
-              <%= cl_image_tag booking.plot.photo %>
+              <%= cl_image_tag plot.photo %>
               <div class="card-product-infos">
-                <h2><%= link_to booking.plot.name, plot_path(booking.plot) %></h2>
-                <p>Date</p>
-                <p><%= booking.plot.description.truncate(90) %></p>
+                <h2><%= link_to plot.name, plot_path(plot) %></h2>
+                <p><%= plot.description.truncate(90)%></p>
+                <div class="current-booking-options">
+                <p><%= link_to "Modify", edit_plot_path(plot) %></p>
+                <p><%= link_to "Remove", plot_path(plot),  method: :delete %></p>
+              </div>
               </div>
             </div>
           </div>
       <% end %>
     </div>
-  </div>
+
+ <!--  <% current_user.plots.each do |plot| %>
+    <% if policy(plot).edit? %>
+      <%= link_to "Update", edit_plot_path(plot) %>
+    <% end %>
+  <% end %> -->
 
 </div>
 
