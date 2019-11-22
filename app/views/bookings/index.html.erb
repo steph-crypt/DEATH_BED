@@ -11,7 +11,7 @@
             <div class="card-product-infos">
               <h2><%= link_to booking.plot.name, plot_path(booking.plot) %></h2>
               <p> <strong>Start Date:</strong> <%= booking.start_date %></p>
-              <!-- <p><%= booking.plot.description.truncate(90) %></p> -->
+       <!--        <p><%= booking.plot.description.truncate(90) %></p> -->
               <div class="current-booking-options">
                 <p><%= link_to "Modify", edit_booking_path(booking) %></p>
                 <p><%= link_to "Cancel", booking_path(booking),  method: :delete %></p>
