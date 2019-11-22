@@ -1,8 +1,10 @@
 class BookingsController < ApplicationController
+  skip_after_action :verify_authorized, only: [:new, :create]
 
   def index
     @bookings = Booking.all
     @bookings = @bookings.where(user: current_user)
+    authorize @booking
   end
 
   def new
@@ -28,6 +30,7 @@ class BookingsController < ApplicationController
 
   def update
     set_booking
+    authorize @booking
     if @booking.update(booking_params)
       redirect_to bookings_path, notice: "Booking was successfully updated"
     else
