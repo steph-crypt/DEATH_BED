@@ -1,11 +1,11 @@
 <div class="container">
   <div class="d-flex justify-content-center plot-banner">
+    <div class="row">
 
-
-      <div class="photo">
+      <div class="col-6">
         <%= cl_image_tag(@plot.photo) %>
       </div>
-      <div class="card bg-light col-6 p-5 pb-1">
+      <div class="card bg-light col-6 p-5">
         <div class="name">
           <h1><%= @plot.name %></h1>
         </div>
@@ -19,6 +19,7 @@
         </br>
         <p><%= link_to "Back to all plots", plots_path %></p>
       </div>
+    </div>
 
   </div>
   <div
@@ -27,7 +28,7 @@
   height: 300px;"
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
+  ></div>
 </div>
 
 <!-- add button to link to booking -->
