@@ -18,6 +18,9 @@ class BookingsController < ApplicationController
     @plot = Plot.find(params[:plot_id])
     @booking = Booking.new(booking_params)
     @booking.user = current_user
+    @booking.plot = @plot
+    @rent_range = @booking.date_range
+    @booking.end_date = @booking.start_date.next_year(@rent_range)
     if @booking.save
       redirect_to @plot
     else
