@@ -1,11 +1,12 @@
 class PlotsController < ApplicationController
+  before_action :check_plot, only: :destroy
 
   def index
     @plots = policy_scope(Plot).order(created_at: :desc)
   end
 
   def show
-    @plot = Plot.find(params[:id])
+    set_plot
     authorize @plot
     @user = @plot.user
     @markers = [{ lat: @plot.latitude, lng: @plot.longitude }]
@@ -21,24 +22,48 @@ class PlotsController < ApplicationController
     @plot.user_id = current_user.id
     authorize @plot
     if @plot.save
-      redirect_to plot_path(@plot)
+      redirect_to user_path(current_user)
     else
       render :new
     end
   end
 
   def edit
-    @plot = Plot.find(params[:id])
+    set_plot
+    authorize @plot
   end
 
   def update
-    @plot = Plot.find(params[:id])
-    @plot.update(params[:plot])
+    set_plot
+    if @plot.update(plot_params)
+      redirect_to plot_path(@plot), notice: "Plot was successfully updated"
+    else
+      render :edit
+    end
+    authorize @plot
+  end
+
+  def destroy
+    set_plot
+    @plot.destroy
+    redirect_to user_path(current_user), notice: "Plot was successfully removed"
+    authorize @plot
   end
 
   private
 
   def plot_params
     params.require(:plot).permit(:name, :cementary_name, :description, :location, :price, :photo)
+  end
+
+  def set_plot
+    @plot = Plot.find(params[:id])
+  end
+
+  def check_plot
+    set_plot
+    if @plot.bookings
+      redirect_to user_path(current_user), notice: "Plot cannot be removed, it has at least open reservation"
+    end
   end
 end
