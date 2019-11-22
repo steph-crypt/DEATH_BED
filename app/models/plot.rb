@@ -10,6 +10,13 @@ class Plot < ApplicationRecord
     end
   end
 
+ include PgSearch::Model
+  pg_search_scope :search_by_name_and_location_and_description_and_price_and_denomination_and_cementary_name,
+    against: [ :name, :location, :price, :denomination, :cementary_name ],
+    using: {
+      tsearch: { prefix: true }
+    }
+
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
 end

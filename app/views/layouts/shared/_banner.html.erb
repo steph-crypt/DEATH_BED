@@ -2,9 +2,18 @@
   <div class="container">
     <h1><strong>Plot</strong> your revenge</h1>
     <p>If you like sleep, you'll <strong>love</strong> death.</p>
-    <a class="btn btn-light" href="#">Find the grave of your dreams</a>
+    <div class="search-form">
+    <%= form_tag plots_path, method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "location, etc..." %>
+      <%= submit_tag "Search Graves", class: "btn btn-light" %>
+    <% end %>
+    </div>
   </div>
 </div>
+
 <!-- <div class="flash flash-success alert alert-dismissible fade show" role="alert">
   <span><strong>Yay!</strong> you successfully signed in to our service.</span>
   <a data-dismiss="alert" aria-label="Close">
@@ -16,5 +25,6 @@
   <a data-dismiss="alert" aria-label="Close">
     <i class="fas fa-times"></i>
   </a>
-</div> -->
+</div>
 
+ -->

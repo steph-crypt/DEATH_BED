@@ -26,5 +26,22 @@
 }
 
 .btn {
-  margin-top: 60px;
+  margin-top: 15px;
+  transition: color 1s ease-in-out, background-color 1s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-light {
+  color: #212529;
+  background-color: #86a1c3d4;
+  border-color: #010206;
+  width: 200px;
+}
+
+.search-form {
+    width: 200px;
+}
+
+.form-control {
+  background-color: #95a0b785;
+  margin-top: 30px;
 }
