@@ -1,6 +1,6 @@
 class PlotsController < ApplicationController
   before_action :check_plot, only: :destroy
-  skip_before_action :authenticate_user!, only: [:index]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @plots = policy_scope(Plot).order(created_at: :desc)
