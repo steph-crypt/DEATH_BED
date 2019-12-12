@@ -21,6 +21,10 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
+.banner-header {
+  padding-left: 176px;
+}
+
 .container {
   padding-top: 75px;
 }
@@ -34,15 +38,16 @@
   color: #212529;
   background-color: #86a1c3d4;
   border-color: #010206;
-  width: 200px;
+  width: 313px;
 }
 
 .search-form {
-    width: 200px;
+    width: 313px;
 }
 
 .form-control {
   background-color: #95a0b785;
   color: #3b3d44;
   margin-top: 30px;
+  width: 313px;
 }
