@@ -10,14 +10,13 @@ class PlotsController < ApplicationController
         OR plots.description @@ :query \
         OR plots.location @@ :query \
         OR plots.denomination @@ :query \
-        OR plots.location @@ :query \
         OR plots.cementary_name @@ :query \
       "
       @plots = Plot.where(sql_query, query: "%#{params[:query]}%")
     else
       @plots = Plot.all
     end
-    skip_policy_scope
+
   end
 
   def show
