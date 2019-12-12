@@ -1,18 +1,19 @@
 .card-product {
   overflow: hidden;
-  height: 120px;
+  height: 440px;
   background: white;
-  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  margin: 10px 5px;
-  border-radius: 0px!important;
-  border: 1px solid rgba(100,100,100,.2);
+  margin: 20px 5px;
+  border-radius: 13px !important;
+  border: 3px solid rgba(100, 100, 100, 0.2);
 }
+
 
 .card-product img {
   height: 100%;
-  width: 120px;
+  width: 223px;
   object-fit: cover;
 }
 
