@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'plots#index'
+  root to: 'pages#home'
  # Now we have the right root to our page, we shouldnt work on pages home.
   resources :plots, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
       resources :bookings, only: [:new, :create]

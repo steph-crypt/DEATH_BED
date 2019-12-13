@@ -1,5 +1,6 @@
 class PlotsController < ApplicationController
   before_action :check_plot, only: :destroy
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @plots = policy_scope(Plot).order(created_at: :desc)
@@ -9,13 +10,13 @@ class PlotsController < ApplicationController
         OR plots.description @@ :query \
         OR plots.location @@ :query \
         OR plots.denomination @@ :query \
-        OR plots.location @@ :query \
         OR plots.cementary_name @@ :query \
       "
       @plots = Plot.where(sql_query, query: "%#{params[:query]}%")
     else
       @plots = Plot.all
     end
+
   end
 
   def show

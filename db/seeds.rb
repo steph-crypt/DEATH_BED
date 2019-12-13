@@ -1,22 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
-
-# url1 = ...
-
-# object1 = Object.new (
-
-# {
-#   name: asdfaf
-
-# }
-
-#   )
 puts "Clearing database..."
 
 Booking.destroy_all
@@ -24,8 +6,6 @@ User.destroy_all
 Plot.destroy_all
 
 puts "Seeding database..."
-
-# object.remote_photo_url = urls 1
 
 u1 = User.create!(email: "janet@example.com", password:"badpass" )
 u2 = User.create!(email: "john@example.com", password:"goodpass" )
@@ -137,8 +117,3 @@ p12.remote_photo_url = photo_url
 p12.save!
 
 puts "Seeded database"
-
-# Faker::Ancient.titan,
-# Faker::TvShows::Buffy.big_bad"@example.com"
-
-
