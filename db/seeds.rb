@@ -38,116 +38,40 @@ u8 = User.create!(email: "jacob@example.com", password:"goodpass" )
 u9 = User.create!(email: "jillian@example.com", password:"okpass" )
 u10 = User.create!(email: "jake@example.com", password:"badpass" )
 u11 = User.create!(email: "jeremy@example.com", password:"goodpass" )
-u12 = User.create!(email: "jesus@example.com", password:"okpass" )
+u12 = User.create!(email: "jane@example.com", password:"okpass" )
 
 
-p2 = Plot.new(name: "Happy Ending", description: "There are strange things done in the midnight sun
-By the men who moil for gold; The Arctic trails have their secret tales that would make your blood run cold;
-The Northern Lights have seen queer sights, but the queerest they ever did see
-Was that night on the marge of Lake Lebarge when I cremated Sam McGee.
-Now Sam McGee was from Tennessee, where the cotton blooms and blows.
-Why he left his home in the South to roam 'round the Pole, God only knows.
-He was always cold, but the land of gold seemed to hold him like a spell;
-Though he'd often say in his homely way that 'he'd sooner live in hell.'", location:"Berlin, Germany", price: 143)
+p2 = Plot.new(name: "Happily Ever-After", description: "Let this beautiful tomb be the happy ending you always dreamed of.", location:"Berlin, Germany", price: 143)
 
-p3 = Plot.new(name: "Buried Alive", description: "There are strange things done in the midnight sun
-By the men who moil for gold; The Arctic trails have their secret tales that would make your blood run cold;
-The Northern Lights have seen queer sights, but the queerest they ever did see
-Was that night on the marge of Lake Lebarge when I cremated Sam McGee.
-Now Sam McGee was from Tennessee, where the cotton blooms and blows.
-Why he left his home in the South to roam 'round the Pole, God only knows.
-He was always cold, but the land of gold seemed to hold him like a spell;
-Though he'd often say in his homely way that 'he'd sooner live in hell.'", location:"Munich, Germany", price: 95)
+p3 = Plot.new(name: "Buried Alive", description: "As fun as it sounds!", location:"Munich, Germany", price: 95)
 
-p1 = Plot.new(name: "Glorious Hole", description: "There are strange things done in the midnight sun
-By the men who moil for gold; The Arctic trails have their secret tales that would make your blood run cold;
-The Northern Lights have seen queer sights, but the queerest they ever did see
-Was that night on the marge of Lake Lebarge when I cremated Sam McGee.
-Now Sam McGee was from Tennessee, where the cotton blooms and blows.
-Why he left his home in the South to roam 'round the Pole, God only knows.
-He was always cold, but the land of gold seemed to hold him like a spell;
-Though he'd often say in his homely way that 'he'd sooner live in hell.'", location:"Hamburg, Germany", price: 105)
+p1 = Plot.new(name: "Glorious", description: "Dare to haunt the echoing chambers of this mausoluem and beyond. Fits many!", location:"Hamburg, Germany", price: 105)
 
-p4 = Plot.new(name: "Lion's Heart", description: "There are strange things done in the midnight sun
-By the men who moil for gold; The Arctic trails have their secret tales that would make your blood run cold;
-The Northern Lights have seen queer sights, but the queerest they ever did see
-Was that night on the marge of Lake Lebarge when I cremated Sam McGee.
-Now Sam McGee was from Tennessee, where the cotton blooms and blows.
-Why he left his home in the South to roam 'round the Pole, God only knows.
-He was always cold, but the land of gold seemed to hold him like a spell;
-Though he'd often say in his homely way that 'he'd sooner live in hell.'", location:"Hamburg, Germany", price: 155)
+p4 = Plot.new(name: "Lion's Heart", description: "The stone-carved lion is over 200 years-old. Let the value you or a loved-one had as a
+ living person be be captured by the heart-wrenching grief of this crying lion tomb.", location:"Hamburg, Germany", price: 155)
 
-p5 = Plot.new(name: "The Whisperers", description: "There are strange things done in the midnight sun
-By the men who moil for gold; The Arctic trails have their secret tales that would make your blood run cold;
-The Northern Lights have seen queer sights, but the queerest they ever did see
-Was that night on the marge of Lake Lebarge when I cremated Sam McGee.
-Now Sam McGee was from Tennessee, where the cotton blooms and blows.
-Why he left his home in the South to roam 'round the Pole, God only knows.
-He was always cold, but the land of gold seemed to hold him like a spell;
-Though he'd often say in his homely way that 'he'd sooner live in hell.'", location:"Stansdorf, Germany", price: 200)
+p5 = Plot.new(name: "The Whisperers", description: "There are strange things in these woods— or so it is whispered.
+  Listen closely, and maybe you will here them.", location:"Stansdorf, Germany", price: 200)
 
-p6 = Plot.new(name: "Kingdom by The Sea", description: "There are strange things done in the midnight sun
-By the men who moil for gold; The Arctic trails have their secret tales that would make your blood run cold;
-The Northern Lights have seen queer sights, but the queerest they ever did see
-Was that night on the marge of Lake Lebarge when I cremated Sam McGee.
-Now Sam McGee was from Tennessee, where the cotton blooms and blows.
-Why he left his home in the South to roam 'round the Pole, God only knows.
-He was always cold, but the land of gold seemed to hold him like a spell;
-Though he'd often say in his homely way that 'he'd sooner live in hell.'", location:"Munich, Germany", price: 220)
+p6 = Plot.new(name: "Kingdom by The Sea", description: "This quiant sea-side tomb is submerged in a perenial fog
+  and haunted impeccably by the ghosts of the surrounding graves.", location:"Munich, Germany", price: 220)
 
-p7 = Plot.new(name: "Rainbow Bridge", description: "There are strange things done in the midnight sun
-By the men who moil for gold; The Arctic trails have their secret tales that would make your blood run cold;
-The Northern Lights have seen queer sights, but the queerest they ever did see
-Was that night on the marge of Lake Lebarge when I cremated Sam McGee.
-Now Sam McGee was from Tennessee, where the cotton blooms and blows.
-Why he left his home in the South to roam 'round the Pole, God only knows.
-He was always cold, but the land of gold seemed to hold him like a spell;
-Though he'd often say in his homely way that 'he'd sooner live in hell.'", location:"Bern, Switzerland", price: 95)
+p7 = Plot.new(name: "Rainbow Bridge", description: "These beautiful floral graves are a joyous celebration of
+ the great cosmic, swirling, unknown.", location:"Bern, Switzerland", price: 95)
 
-p8 = Plot.new(name: "Last Train to Glory", description: "There are strange things done in the midnight sun
-By the men who moil for gold; The Arctic trails have their secret tales that would make your blood run cold;
-The Northern Lights have seen queer sights, but the queerest they ever did see
-Was that night on the marge of Lake Lebarge when I cremated Sam McGee.
-Now Sam McGee was from Tennessee, where the cotton blooms and blows.
-Why he left his home in the South to roam 'round the Pole, God only knows.
-He was always cold, but the land of gold seemed to hold him like a spell;
-Though he'd often say in his homely way that 'he'd sooner live in hell.'", location:"Berlin, Germany", price: 250)
+p8 = Plot.new(name: "Last Train to Glory", description: "The Arctic trails have their secret tales that would make
+ your blood run cold. When it does, be sure to board the Last Train to Glory.", location:"Berlin, Germany", price: 250)
 
-p9 = Plot.new(name: "Annabelle Lee", description: "There are strange things done in the midnight sun
-By the men who moil for gold; The Arctic trails have their secret tales that would make your blood run cold;
-The Northern Lights have seen queer sights, but the queerest they ever did see
-Was that night on the marge of Lake Lebarge when I cremated Sam McGee.
-Now Sam McGee was from Tennessee, where the cotton blooms and blows.
-Why he left his home in the South to roam 'round the Pole, God only knows.
-He was always cold, but the land of gold seemed to hold him like a spell;
-Though he'd often say in his homely way that 'he'd sooner live in hell.'", location:"Hamburg, Germany", price: 245)
+p9 = Plot.new(name: "Annabelle Lee", description: "For the dearly departed lover, Annabelle Lee represents love that
+ was a muse, and a loss that can never be reconciled.", location:"Hamburg, Germany", price: 245)
 
-p10 = Plot.new(name: "Davey Jones' Locker", description: "There are strange things done in the midnight sun
-By the men who moil for gold; The Arctic trails have their secret tales that would make your blood run cold;
-The Northern Lights have seen queer sights, but the queerest they ever did see
-Was that night on the marge of Lake Lebarge when I cremated Sam McGee.
-Now Sam McGee was from Tennessee, where the cotton blooms and blows.
-Why he left his home in the South to roam 'round the Pole, God only knows.
-He was always cold, but the land of gold seemed to hold him like a spell;
-Though he'd often say in his homely way that 'he'd sooner live in hell.'", location:"Nuremberg, Germany", price: 125)
+p10 = Plot.new(name: "Davey Jones' Locker", description: "Be one of Davey Jones' captured souls!", location:"Nuremberg, Germany", price: 125)
 
-p11 = Plot.new(name: "Swan Tree", description: "There are strange things done in the midnight sun
-By the men who moil for gold; The Arctic trails have their secret tales that would make your blood run cold;
-The Northern Lights have seen queer sights, but the queerest they ever did see
-Was that night on the marge of Lake Lebarge when I cremated Sam McGee.
-Now Sam McGee was from Tennessee, where the cotton blooms and blows.
-Why he left his home in the South to roam 'round the Pole, God only knows.
-He was always cold, but the land of gold seemed to hold him like a spell;
-Though he'd often say in his homely way that 'he'd sooner live in hell.'", location:"Liepzig, Germany", price: 75)
+p11 = Plot.new(name: "Swan Tree", description: "Cast off into eternity beneath the the beautiful Swan tree,
+ which, legend has it, is always in bloom.", location:"Liepzig, Germany", price: 75)
 
-p12 = Plot.new(name: "No Tomorrow", description: "There are strange things done in the midnight sun
-By the men who moil for gold; The Arctic trails have their secret tales that would make your blood run cold;
-The Northern Lights have seen queer sights, but the queerest they ever did see
-Was that night on the marge of Lake Lebarge when I cremated Sam McGee.
-Now Sam McGee was from Tennessee, where the cotton blooms and blows.
-Why he left his home in the South to roam 'round the Pole, God only knows.
-He was always cold, but the land of gold seemed to hold him like a spell;
-Though he'd often say in his homely way that 'he'd sooner live in hell.'", location:"Berlin, Germany", price: 75)
+p12 = Plot.new(name: "No Tomorrow", description: "Live like there's no tomorrow. And when there actually is no tomorrow,
+ die like you lived like there was no tomorrow— in an exquisite ancient-Roman-style crypt.", location:"Berlin, Germany", price: 75)
 
 
 p1.user = u1
