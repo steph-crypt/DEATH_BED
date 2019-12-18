@@ -25,3 +25,13 @@
   background-color: #ffffff;
   border-color: #C7CEE3;
 }
+
+.ap-input-icon svg {
+    fill: #cfcfcf;
+    position: absolute;
+    top: 70%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding-top: -17px;
+}
