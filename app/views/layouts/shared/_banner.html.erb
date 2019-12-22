@@ -6,7 +6,7 @@
     <%= form_tag plots_path, method: :get do %>
       <%= text_field_tag :query,
       params[:query],
-      class: "form-control",
+      class: "banner-form-control",
       placeholder: "Search by location, etc..." %>
       <%= submit_tag "Search Graves", class: "btn btn-light" %>
     <% end %>
