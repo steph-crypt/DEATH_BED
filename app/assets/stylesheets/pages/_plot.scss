@@ -1,15 +1,29 @@
+.container {
+  border: 1px solid, black;
+}
+
 .plot-banner {
   height: 550px;
   width: 100%;
+  background-color: white;
 
   img {
     height: 550px;
+    // border-radius: 10px;
+    max-width: 555px;
   }
 
   .card {
     height: 550px;
+    // border-radius: 10px;
+    max-width: 555px;
   }
-}
+
+ }
+  .bg-light {
+    background-color: #fff!important;
+  }
+
 
 #map {
   // border: 1px solid rgba(0,0,0,.4);
