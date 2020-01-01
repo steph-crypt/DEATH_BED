@@ -1,12 +1,14 @@
 class ReviewsController < ApplicationController
+
   def new
     set_booking
     @plot = @booking.plot
     @review = Review.new
+    authorize @review
   end
 
   def create
-    set_spot
+    set_booking
     @review = Review.new(review_params)
     @review.user_id = current_user.id
     @review.booking = @booking
