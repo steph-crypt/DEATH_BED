@@ -6,37 +6,29 @@
   padding-bottom: 28px;
 }
 
-// form {
-//     display: block;
-//     margin-top: 0em;
-//     width: 500px;
-// }
-
-// .form-control {
-//     display: inline-block;
-//     padding: 20px;
-//   }
-
 .search-bar {
   width: 100%;
   .algolia-places {
     width: 56% !important;
   }
+
   form {
     width: 40%;
+    display: -webkit-box;
     display: flex;
+    -webkit-box-align: center;
     align-items: center;
     justify-content: space-around;
     margin-left: 5px;
     margin-right: 5px;
-    padding: 10px;
+    margin-top: 30px;
   }
 
   .ap-input-icon svg {
-    fill: white;
+    fill: #a7a2a2;
     position: absolute;
-    top: 72%;
-    left: 40px;
+    top: 51%;
+    left: 0px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     padding-top: -17px;
@@ -44,17 +36,21 @@
 }
 
 .btn-search {
-  margin-top: 0px;
-  margin-left: 10px;
-  margin-bottom: -28px;
   padding: 7px;
   padding-left: 25px;
   padding-right: 25px;
+  height: 38px;
+  transition: color 1s ease-in-out, background-color 1s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .btn-primary {
   color: #000;
   background-color: #ffffff;
-  border-color: #C7CEE3;
+  border-color: #505152;
+}
+
+.btn-primary:hover {
+  background-color: #a9a7a7;
+  border-color: #a9a7a7;
 }
 
