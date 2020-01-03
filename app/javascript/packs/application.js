@@ -10,3 +10,7 @@ initMapbox();
 
 window.initAutocomplete = initAutocomplete
 initAutocomplete()
+
+import { initStarRating } from '../plugins/init_star_rating';
+
+initStarRating();

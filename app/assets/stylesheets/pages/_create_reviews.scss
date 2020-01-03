@@ -1,0 +1,94 @@
+.container-review-first {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-header {
+  text-align: center;
+}
+
+.left {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 35px;
+}
+
+.left h1 {
+  font-family: 'Grand Hotel', cursive;
+  font-size: 50px;
+  font-style: italic;
+  text-align: center;
+}
+
+.left h1 h1 {
+  font-family: 'Grand Hotel', cursive;
+  font-size: 50px;
+  font-style: italic;
+  text-align: center;
+}
+
+.left body {
+  text-align: center;
+}
+
+.show-img-container img {
+  max-width: 440px;
+  border-radius: 10px;
+}
+
+.detail-right h3 {
+  padding-top: 105px;
+  padding-bottom: 12px;
+  font-size: 50px;
+  font-family: 'Grand Hotel', cursive;
+  font-style: italic;
+}
+
+.br-theme-css-stars .br-widget {
+  height: 25px!important;
+  white-space: nowrap;
+  float: center!important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0px 5px 0px!important;
+}
+
+.br-theme-css-stars .br-widget a {
+  text-decoration: none;
+  height: 40px!important;
+  width: 40px!important;
+  float: left;
+  font-size: 32px!important;
+}
+.br-theme-css-stars .br-widget a:after {
+  content: "\2605";
+  color: #d2d2d2;
+}
+.br-theme-css-stars .br-widget a.br-active:after {
+  color: #EDB867;
+}
+.br-theme-css-stars .br-widget a.br-selected:after {
+  color: #EDB867;
+}
+.br-theme-css-stars .br-widget .br-current-rating {
+  display: none;
+}
+.br-theme-css-stars .br-readonly a {
+  cursor: default;
+}
+@media print {
+  .br-theme-css-stars .br-widget a:after {
+    content: "\2606";
+    color: black;
+  }
+  .br-theme-css-stars .br-widget a.br-active:after,
+  .br-theme-css-stars .br-widget a.br-selected:after {
+    content: "\2605";
+    color: black;
+  }
+}
