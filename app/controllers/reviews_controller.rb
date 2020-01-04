@@ -12,11 +12,12 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.user_id = current_user.id
     @review.booking = @booking
-    if review.save!
-      redirect_to new_review_path notice: "Thanks for leaving a review of #{@booking.plot.name} from the Great Beyond!"
+    if @review.save!
+      redirect_to user_path(current_user), notice: "Thanks for leaving a review of #{@booking.plot.name} from the Great Beyond!"
     else
       render :new
     end
+    skip_authorization
   end
 
   private
