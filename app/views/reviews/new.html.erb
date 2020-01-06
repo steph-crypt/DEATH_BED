@@ -1,0 +1,17 @@
+<div class="container mt-4">
+  <div class="review-container">
+    <div class="row d-flex">
+      <div class="form-left  col-xm-12 col-md-6">
+        <h1 style="padding-top: 47px; text-align: left; font-family: 'Telex', sans-serif;">Leave a review for <br><%= @booking.plot.name %></h1></br></h1>
+          <%#= cl_image_tag @plot.user.name %>
+          <%= render "form" %>
+      </div>
+      <div class="detail-right col-xs-12 col-md-6">
+        <div class="show-img-container">
+          <%#= cl_image_tag @plot.photo, class: "show-img"  %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_22_135945) do
+ActiveRecord::Schema.define(version: 2020_01_01_031715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,15 @@ ActiveRecord::Schema.define(version: 2019_11_22_135945) do
     t.float "longitude"
     t.string "denomination"
     t.index ["user_id"], name: "index_plots_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "user_id"
+    t.text "comments"
+    t.integer "satisfaction"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "booking_id"
   end
 
   create_table "users", force: :cascade do |t|

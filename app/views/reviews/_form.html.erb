@@ -1,0 +1,16 @@
+<div class="container-form">
+  <%= simple_form_for([@booking, @review]) do |f| %>
+  <div class="form-box">
+      <div class="left">
+        <h3>Leave a Review From the Great Beyond</h3>
+        <%= f.input :satisfaction, label: "How Satisfying is your DeathBed?", collection: (1..5).to_a, class:"margin-bottom:0px;" %>
+        <%= f.input :comments, label: "Comments about your Deathbed or the Great Beyond", as: :text %>
+
+      <div class="button-div">
+      <%= f.submit class: "btn-fun btn-dark-solid" %>
+      </div>
+      </div>
+  </div>
+  <% end %>
+</div>
+
