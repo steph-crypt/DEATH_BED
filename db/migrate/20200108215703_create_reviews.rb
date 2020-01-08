@@ -5,9 +5,8 @@ class CreateReviews < ActiveRecord::Migration[5.2]
       t.integer :booking_id
       t.integer :satisfaction
       t.text :comments
-      t.references :user
-      t.references :booking
-
+      t.references :booking, foreign_key: true
+      t.references :user, foreign_key: true
       t.timestamps
     end
   end
