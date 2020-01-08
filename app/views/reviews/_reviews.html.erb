@@ -1,0 +1,7 @@
+ <div class="show-page-reviews">
+  <% if @review.booking.plot_id == @plot.id %>
+    <%= @review.user.email %>
+    <%= @review.satisfaction %>
+    <%= @review.comments %>
+  <% end %>
+</div>
