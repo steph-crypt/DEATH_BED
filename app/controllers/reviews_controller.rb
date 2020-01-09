@@ -20,6 +20,15 @@ class ReviewsController < ApplicationController
     skip_authorization
   end
 
+def show
+  set_booking
+  @review = Review.new
+  @review = Review.find(params[:review_id])
+  @plot
+
+end
+
+
   private
 
   def set_booking
