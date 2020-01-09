@@ -20,14 +20,16 @@ class ReviewsController < ApplicationController
     skip_authorization
   end
 
-def show
-  set_booking
-  @review = Review.new
-  @review = Review.find(params[:review_id])
-  @plot
+  def update
+    @review.update(reveriew_params)
+    @authorize_update
+  end
 
-end
-
+  def destroy
+    @review.destroy
+    redirect_to user_path, notice: "Review was successfully Deleted"
+    @authorize_destroy
+  end
 
   private
 

@@ -5,8 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :bookings
   has_many :plots
-  has_many :reviews
-
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+  has_many :reviews, through: :bookings
 end
