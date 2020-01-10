@@ -23,6 +23,8 @@ class PlotsController < ApplicationController
     set_plot
     authorize @plot
     @user = @plot.user
+    @booking = @plot.bookings
+    @review = Review.joins(:booking).where("booking.plot_id = plot.id")
     @markers = [{ lat: @plot.latitude, lng: @plot.longitude }]
   end
 

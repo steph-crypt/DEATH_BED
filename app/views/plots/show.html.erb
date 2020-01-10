@@ -20,8 +20,16 @@
         </br>
         <p><%= link_to "Back to all plots", plots_path %></p>
       </div>
+      <div class="show-page-reviews">
+        <% @plot.reviews.each do |review| %>
+          <p><%= review.user.first_name %></p>
+          <p><%= review.satisfaction%></p>
+          <p><%= review.comments %></p>
+         <!--  <p><%#= link_to 'Edit', booking_review_path(review) %></p>
+          <p><%#= link_to 'Delete', review_path, method: :delete, data:{ confirm: 'Are you sure?' } %></p> -->
+        <% end %>
+      </div>
     </div>
-
   </div>
   <div
   id="map"

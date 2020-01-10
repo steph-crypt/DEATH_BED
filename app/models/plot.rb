@@ -1,7 +1,9 @@
 class Plot < ApplicationRecord
   # belongs_to :user, through: :bookings
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   belongs_to :user
+  has_many :reviews, through: :bookings
+
   mount_uploader :photo, PhotoUploader
 
   def unavailable_dates
