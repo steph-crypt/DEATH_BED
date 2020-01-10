@@ -25,8 +25,7 @@
           <p><%= review.user.first_name %></p>
           <p><%= review.satisfaction%></p>
           <p><%= review.comments %></p>
-         <!--  <p><%#= link_to 'Edit', booking_review_path(review) %></p>
-          <p><%#= link_to 'Delete', review_path, method: :delete, data:{ confirm: 'Are you sure?' } %></p> -->
+          <p><%= link_to 'Destroy', method: :delete, data:{ confirm: 'Are you sure?' } %></p>
         <% end %>
       </div>
     </div>
