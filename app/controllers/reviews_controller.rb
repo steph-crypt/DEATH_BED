@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :skip_authorization
 
   def new
     set_booking
@@ -17,19 +18,24 @@ class ReviewsController < ApplicationController
     else
       render :new
     end
-    skip_authorization
+    authorize @review
   end
 
-def show
-  set_booking
-  @review = Review.new
-  @review = Review.find(params[:review_id])
-  @plot
+  def destroy
+    set_booking
+    set_review
+    if @review.destroy
+      redirect_to user_path, notice: "Review was successfully Deleted"
+      authorize @review
+    end
 
-end
-
+  end
 
   private
+
+  def set_review
+    @review = Review.find(params[:id])
+  end
 
   def set_booking
     @booking = Booking.find(params[:booking_id])
