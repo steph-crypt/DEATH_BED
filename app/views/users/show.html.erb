@@ -1,6 +1,24 @@
 <div class="container">
   <h1 class="">Hello <%= current_user.first_name %></h1>
 
+  <div class="row">
+      <% if @unreviewed_bookings != [] %>
+        <div class="col-sx-12 col-sm-12 col-md-10 col-lg-10">
+
+          <% @unreviewed_bookings.each do |booking| %>
+            <div class="card-product review-notice">
+              <%= cl_image_tag(booking.plot.photo) %>
+              <div class="card-product-infos review-notice-infos">
+                <h3><%= booking.user.first_name %>, <%= link_to booking.plot.name , new_booking_review_path(booking) %> is your home for <%= (Date.parse(booking.start_date.to_s) - Date.parse(booking.end_date.to_s)).to_i %> earth days </h3>
+                <p class="pl-0">If you died, tell us how it's going!</p>
+               <%= link_to "Review Now", new_booking_review_path(booking), class:"btn-fun btn-dark-solid" %>
+              </div>
+            </div>
+          <% end %>
+
+        </div>
+      <% end %>
+
   <table class="table mt-5">
     <thead>
       <tr>

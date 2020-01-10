@@ -10,8 +10,8 @@ class ReviewPolicy < ApplicationPolicy
     create?
   end
 
-  def show?
-    true
+  def destroy?
+    record.user == user
   end
 
 end
