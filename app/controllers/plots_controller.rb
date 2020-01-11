@@ -24,7 +24,7 @@ class PlotsController < ApplicationController
     authorize @plot
     @user = @plot.user
     @booking = @plot.bookings
-    @review = Review.joins(:booking).where("booking.plot_id = plot.id")
+    @review = Review.joins(:booking).where("booking.plot_id = plot.id").order("created_at DESC")
     @markers = [{ lat: @plot.latitude, lng: @plot.longitude }]
   end
 
@@ -63,13 +63,6 @@ class PlotsController < ApplicationController
     set_plot
     @plot.destroy
     redirect_to user_path(current_user), notice: "Plot was successfully removed"
-
-    set_booking
-    set_review
-    if @plot.review.destroy
-      redirect_to user_path, notice: "Review was successfully Deleted"
-      authorize @plot
-    end
   end
 
   private
