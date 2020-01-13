@@ -9,6 +9,7 @@
         <div class="name">
           <h1><%= @plot.name %></h1>
         </div>
+        <div class="star-rating"><%= @avg_review %><em><%= " (#{@plot.reviews.length} reviews)"%></em></div>
           <h2>$<%= @plot.price %> per 10 Years</h2>
         <p><strong>Plot Description: </strong> <%= @plot.description %></p>
           <% if user_signed_in? %>
@@ -33,11 +34,12 @@
     <h1>Reviews</h1>
         <% @plot.reviews.each do |review| %>
           <p><%= review.user.first_name %></p>
-          <p><%= review.satisfaction%></p>
+          <p><%= review.satisfaction %></p>
           <em>"<%= review.comments %>"</em>
           <p><%= link_to 'Destroy', booking_review_path(@plot), method: :delete, data:{ confirm: 'Are you sure?' } %></p>
         <% end %>
       </div>
 </div>
+
 
 <!-- add button to link to booking -->

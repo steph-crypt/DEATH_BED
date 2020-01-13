@@ -24,8 +24,14 @@ class PlotsController < ApplicationController
     authorize @plot
     @user = @plot.user
     @booking = @plot.bookings
-    @review = Review.joins(:booking).where("booking.plot_id = plot.id").order("created_at DESC")
+    @review = @plot.reviews
+    # @review = Review.joins(:booking).where("booking.plot_id = plot.id").order("created_at DESC")
     @markers = [{ lat: @plot.latitude, lng: @plot.longitude }]
+    if @review.blank?
+      @avg_review = 0
+    else
+      @avg_review = @plot.reviews.average(:satisfaction).round(2)
+    end
   end
 
   def new
