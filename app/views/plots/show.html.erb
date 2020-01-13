@@ -9,7 +9,7 @@
         <div class="name">
           <h1><%= @plot.name %></h1>
         </div>
-        <div class="star-rating"><%= @avg_review %><em><%= " (#{@plot.reviews.length} reviews)"%></em></div>
+        <div class="star-rating"><%= @avg_review %><em><%= " #{@plot.reviews.length} review".pluralize(1)%></em></div>
           <h2>$<%= @plot.price %> per 10 Years</h2>
         <p><strong>Plot Description: </strong> <%= @plot.description %></p>
           <% if user_signed_in? %>
