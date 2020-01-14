@@ -30,15 +30,16 @@
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
-  <div class="show-page-reviews">
+  <div id="review_satisfaction">
     <h1>Reviews</h1>
         <% @plot.reviews.each do |review| %>
           <p><%= review.user.first_name %></p>
           <p><%= review.satisfaction %></p>
           <em>"<%= review.comments %>"</em>
-          <p><%= link_to 'Destroy', booking_review_path(@plot), method: :delete, data:{ confirm: 'Are you sure?' } %></p>
         <% end %>
-      </div>
+  </div>
+
+  <script></script>
 </div>
 
 
