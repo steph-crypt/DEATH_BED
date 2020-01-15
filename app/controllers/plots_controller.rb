@@ -63,10 +63,25 @@ class PlotsController < ApplicationController
     set_plot
     @plot.destroy
     redirect_to user_path(current_user), notice: "Plot was successfully removed"
-    authorize @plot
+
+    set_booking
+    set_review
+    if @plot.review.destroy
+      redirect_to user_path, notice: "Review was successfully Deleted"
+      authorize @plot
+    end
   end
 
   private
+
+
+ def set_review
+    @review = Review.find(params[:id])
+  end
+
+  def set_booking
+    @booking = Booking.find(params[:booking_id])
+  end
 
   def plot_params
     params.require(:plot).permit(:name, :cementary_name, :description, :location, :price, :photo)
