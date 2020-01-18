@@ -44,9 +44,9 @@
     </tbody>
   </table>
 
-  <div class="col-6">
-        <%= cl_image_tag(@user.photo) %>
-      </div>
+  <div class="user-image">
+    <%= cl_image_tag(@user.photo) %>
+  </div>
 
   <%= link_to "Edit Profile", edit_user_registration_path(current_user[:id]) %>
 
