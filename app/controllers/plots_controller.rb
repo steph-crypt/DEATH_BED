@@ -25,7 +25,6 @@ class PlotsController < ApplicationController
     @user = @plot.user
     @booking = @plot.bookings
     @review = @plot.reviews
-    # @review = Review.joins(:booking).where("booking.plot_id = plot.id").order("created_at DESC")
     @markers = [{ lat: @plot.latitude, lng: @plot.longitude }]
     if @review.blank?
       @avg_review = 0
