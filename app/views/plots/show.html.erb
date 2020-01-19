@@ -34,9 +34,11 @@
     <h1>Reviews</h1>
         <% @plot.reviews.each do |review| %>
           <p><%= review.user.first_name %></p>
-          <p><%= review.satisfaction %></p>
+          <% review.satisfaction.to_i.times do %>
+            <i class="fas fa-star"></i>
+            <% end %>
+            <br>
           <em>"<%= review.comments %>"</em>
-          <p><%= link_to 'Destroy', booking_review_path(@plot), method: :delete, data:{ confirm: 'Are you sure?' } %></p>
         <% end %>
       </div>
 </div>
