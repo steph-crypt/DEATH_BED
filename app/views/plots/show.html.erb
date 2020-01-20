@@ -6,9 +6,10 @@
         <%= cl_image_tag(@plot.photo) %>
       </div>
       <div class="card bg-light col-6 p-5">
-        <div class="name">
-          <h1><%= @plot.name %></h1>
+        <div class="plot-name">
+          <p><%= @plot.name %></p>
         </div>
+
         <div class="star-rating">
           <% if @plot.reviews.blank? %>
             <% else %>
@@ -20,18 +21,26 @@
           <em><%= link_to " #{@plot.reviews.length} review".pluralize(2), "#show-page-reviews"%></em>
               <% end %>
         </div>
+
+        <div class="plot-price">
           <h2>$<%= @plot.price %> per 10 Years</h2>
-        <p><strong>Plot Description: </strong> <%= @plot.description %></p>
+        </div>
+
+        <div class="plot-description">
+          <p><strong>Plot Description: </strong> <%= @plot.description %></p>
+        </div>
+
           <% if user_signed_in? %>
             <%= link_to "Book Plot", new_plot_booking_path(@plot[:id]), class:"btn btn-secondary" %>
           <% else %>
             <%= link_to "Book Plot", new_user_registration_path, class:"btn btn-secondary" %>
           <% end %>
-        </br>
+          </br>
         <p><%= link_to "Back to all plots", plots_path %></p>
       </div>
     </div>
   </div>
+
   <div
   id="map"
   style="width: 100%;
@@ -39,6 +48,7 @@
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
+
   <div id="show-page-reviews">
     <h1>Reviews</h1>
       <%if @plot.reviews.blank? %>
