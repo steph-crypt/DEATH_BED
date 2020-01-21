@@ -24,8 +24,14 @@ class PlotsController < ApplicationController
     authorize @plot
     @user = @plot.user
     @booking = @plot.bookings
-    @review = Review.joins(:booking).where("booking.plot_id = plot.id")
+    @review = @plot.reviews
     @markers = [{ lat: @plot.latitude, lng: @plot.longitude }]
+
+    if @review.blank?
+      @avg_review = 0
+    else
+      @avg_review = @plot.reviews.average(:satisfaction).round(2)
+    end
   end
 
   def new
@@ -63,25 +69,9 @@ class PlotsController < ApplicationController
     set_plot
     @plot.destroy
     redirect_to user_path(current_user), notice: "Plot was successfully removed"
-
-    set_booking
-    set_review
-    if @plot.review.destroy
-      redirect_to user_path, notice: "Review was successfully Deleted"
-      authorize @plot
-    end
   end
 
   private
-
-
- def set_review
-    @review = Review.find(params[:id])
-  end
-
-  def set_booking
-    @booking = Booking.find(params[:booking_id])
-  end
 
   def plot_params
     params.require(:plot).permit(:name, :cementary_name, :description, :location, :price, :photo)
