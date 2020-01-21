@@ -34,7 +34,10 @@
     <h1>Reviews</h1>
         <% @plot.reviews.each do |review| %>
           <p><%= review.user.first_name %></p>
-          <p><%= review.satisfaction %></p>
+          <% review.satisfaction.to_i.times do %>
+            <i class="fas fa-star"></i>
+            <% end %>
+            <br>
           <em>"<%= review.comments %>"</em>
         <% end %>
   </div>
