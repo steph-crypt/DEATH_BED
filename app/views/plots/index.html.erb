@@ -1,16 +1,3 @@
-<div class="search-bar" class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(http://api.ning.com/files/kV4MbYiv7oStHUX0rm0MiV-YC-0Fpdw2toXkg*s2CBvczBakTz*Osx63lKgO48mBdyPT7o7-JMw-Cf59KXxt3KK46oKW561I/1082056507.jpeg);">
-  <div class="row justify-content-center border-0 m-0">
-      <%= form_tag(plots_path, method: :get) do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control-index",
-          placeholder: "Find a Plot"
-        %>
-        <%= submit_tag "Search", class: "btn-search btn-primary" %>
-      <% end %>
-  </div>
-</div>
-
 <div class="container">
   <div class="header">Plots Near You! </div>
   <div class="row">
