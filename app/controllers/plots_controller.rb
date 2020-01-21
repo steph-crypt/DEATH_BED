@@ -26,6 +26,7 @@ class PlotsController < ApplicationController
     @booking = @plot.bookings
     @review = @plot.reviews
     @markers = [{ lat: @plot.latitude, lng: @plot.longitude }]
+
     if @review.blank?
       @avg_review = 0
     else
@@ -71,15 +72,6 @@ class PlotsController < ApplicationController
   end
 
   private
-
-
- def set_review
-    @review = Review.find(params[:id])
-  end
-
-  def set_booking
-    @booking = Booking.find(params[:booking_id])
-  end
 
   def plot_params
     params.require(:plot).permit(:name, :cementary_name, :description, :location, :price, :photo)
