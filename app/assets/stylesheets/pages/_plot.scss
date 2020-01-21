@@ -7,23 +7,23 @@
   width: 100%;
   background-color: white;
 
-  img {
-    height: 550px;
-    // border-radius: 10px;
-    max-width: 555px;
-  }
 
-  .card {
-    height: 550px;
-    // border-radius: 10px;
-    max-width: 555px;
-  }
+img {
+  height: 550px;
+  max-width: 555px;
+  border-top-left-radius: 215px;
+}
 
- }
-  .bg-light {
-    background-color: #fff!important;
-  }
+.card {
+  height: 550px;
+  max-width: 555px;
+  border-top-right-radius: 228px;
+}
+}
 
+.bg-light {
+  background-color: #fff!important;
+}
 
 #map {
   margin: 10px 0px;
