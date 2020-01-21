@@ -2,20 +2,29 @@
   border: 1px solid black;
 }
 
+.form-control-index {
+  position: relative;
+  top: 14px;
+  left: 19px;
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 2px;
+  -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
 .m-0 {
   padding-bottom: 28px;
 }
-
-// form {
-//     display: block;
-//     margin-top: 0em;
-//     width: 500px;
-// }
-
-// .form-control {
-//     display: inline-block;
-//     padding: 20px;
-//   }
 
 .search-bar {
   width: 100%;
@@ -33,10 +42,10 @@
   }
 
   .ap-input-icon svg {
-    fill: white;
+    fill: gray;
     position: absolute;
-    top: 72%;
-    left: 40px;
+    top: 86%;
+    left: 21px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     padding-top: -17px;
@@ -44,10 +53,10 @@
 }
 
 .btn-search {
-  margin-top: 0px;
-  margin-left: 10px;
-  margin-bottom: -28px;
-  padding: 7px;
+  position: relative;
+  top: 14px;
+  right: 19px;
+  padding: 6px;
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -56,5 +65,11 @@
   color: #000;
   background-color: #ffffff;
   border-color: #C7CEE3;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+    color: #fff;
+    background-color: gray;
+    border-color: gray;
 }
 
