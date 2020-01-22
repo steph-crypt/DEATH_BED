@@ -53,7 +53,7 @@
         <div class="col-sx-12 col-sm-6 col-md-6 col-lg-4">
           <div class="card-product">
             <%= cl_image_tag booking.plot.photo %>
-            <div class="card-product-infos">
+            <div class="card-booking-infos">
               <h2><%= link_to booking.plot.name, plot_path(booking.plot) %></h2>
               <p> <strong>Start Date:</strong> <%= booking.start_date %></p>
               <p><strong>Total Price:</strong> $<%= booking.plot.price * (booking.date_range / 10) %></p>

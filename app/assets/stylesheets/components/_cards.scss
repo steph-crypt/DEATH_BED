@@ -73,7 +73,7 @@
   font-size: 30px;
   font-style: italic;
   font-weight: bold;
-  color: #64686d;
+  color: #000000
 }
 
 .card-product p {
@@ -83,7 +83,7 @@
 }
 
 .card-product a {
-  color: #5b5f63;
+  color: #000000;
 }
 
 .card-product .card-product-infos {
@@ -94,6 +94,22 @@
   text-align: center;
 }
 
+.card-product .card-booking-infos {
+  padding: 44px;
+  position: relative;
+  bottom: 32px;
+  height: 112px;
+  text-align: center;
+}
+
+.card-product .card-booking-infos p {
+  color: #5b5f63;
+  margin-top: -4px;
+}
+
+.current-booking-options p {
+  color: #5b5f63;
+}
 // .card-product-infos .card-product-user {
 //   position: absolute;
 //   right: 16px;
