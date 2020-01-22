@@ -56,7 +56,7 @@
 
 }
 
-.btn-search {
+.btn-search-nav {
   position: relative;
   top: 14px;
   right: 19px;
@@ -65,7 +65,7 @@
   padding-right: 25px;
 }
 
-.btn-primary {
+.btn-primary-nav {
   position: relative;
   top: -18px;
   left: 278px;
@@ -76,7 +76,7 @@
   transition: color 1s ease-in-out, background-color 1s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+.btn-primary-nav:hover, .btn-primary-nav:focus, .btn-primary-nav:active, .btn-primary-nav.active {
     color: black;
     background-color: white;
     border-color: gray;
