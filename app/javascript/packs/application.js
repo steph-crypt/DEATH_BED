@@ -14,3 +14,13 @@ initAutocomplete()
 import { initStarRating } from '../plugins/init_star_rating';
 
 initStarRating();
+
+const searchHomePage = document.querySelector('.search-bar-hidden')
+console.log(searchHomePage)
+
+if (searchHomePage) {
+  const algoliaIcon = document.querySelector('.ap-icon-pin')
+  console.log(algoliaIcon)
+  algoliaIcon.style.top = '35px'
+  algoliaIcon.style.right = '45px'
+}
