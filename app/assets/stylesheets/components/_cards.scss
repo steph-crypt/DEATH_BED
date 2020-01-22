@@ -56,7 +56,8 @@
   background: white;
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 310px;
-  margin: 30px 5px;
+  margin-top: 40px;
+  margin-left: 20px;
   border: 3px solid rgba(100, 100, 100, 0.2);
   border-radius: 13px !important;
 }
@@ -70,7 +71,9 @@
 }
 
 .card-product h2 {
-  font-size: 19px;
+  font-family: 'Grand Hotel', cursive;
+  font-size: 30px;
+  font-style: italic;
   font-weight: bold;
   color: #64686d;
 }
@@ -88,7 +91,7 @@
 .card-product .card-product-infos {
   padding: 44px;
   position: relative;
-  bottom: 10px;
+  bottom: 20px;
   height: 112px;
   text-align: center;
 }
