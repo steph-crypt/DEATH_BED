@@ -1,0 +1,27 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background: $white;
+  // #61708e;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+.logo {
+  font-family: 'Grand Hotel', cursive;
+  font-size: 25px;
+  color: black;
+
+  p {
+    margin: 0 0 0 10px;
+    padding: 5px 0 0 0;
+
+ }
+}
+
+
