@@ -6,10 +6,10 @@
         <div class="col-sx-12 col-sm-12 col-md-10 col-lg-10">
 
           <% @unreviewed_bookings.each do |booking| %>
-            <div class="card-product review-notice">
+            <div class="review-notice-card">
               <%= cl_image_tag(booking.plot.photo) %>
-              <div class="card-product-infos review-notice-infos">
-                <h3><%= booking.user.first_name %>, <%= link_to booking.plot.name , new_booking_review_path(booking) %> is your home for <%= (Date.parse(booking.start_date.to_s) - Date.parse(booking.end_date.to_s)).to_i %> earth days </h3>
+              <div class="review-notice-infos">
+                <h3><%= booking.user.first_name %>, <strong><%= link_to booking.plot.name , new_booking_review_path(booking) %></strong> is your home for <%= (Date.parse(booking.start_date.to_s) - Date.parse(booking.end_date.to_s)).to_i %> earth days </h3>
                 <p class="pl-0">If you died, tell us how it's going!</p>
                <%= link_to "Review Now", new_booking_review_path(booking), class:"btn-fun btn-dark-solid" %>
               </div>
@@ -45,15 +45,15 @@
   </table>
 <br>
   <%= link_to "Edit Profile", edit_user_registration_path(current_user[:id]) %>
-</br>
-  <h1>Your bookings</h1>
+<br>
+  <h1 id="your-booking">Your bookings</h1>
   <div class="row">
     <% current_user.bookings.each do |booking| %>
 
         <div class="col-sx-12 col-sm-6 col-md-6 col-lg-4">
           <div class="card-product">
             <%= cl_image_tag booking.plot.photo %>
-            <div class="card-product-infos">
+            <div class="card-booking-infos">
               <h2><%= link_to booking.plot.name, plot_path(booking.plot) %></h2>
               <p> <strong>Start Date:</strong> <%= booking.start_date %></p>
               <p><strong>Total Price:</strong> $<%= booking.plot.price * (booking.date_range / 10) %></p>
@@ -66,8 +66,9 @@
         </div>
     <% end %>
   </div>
-
-  <h1>Your listings</h1>
+<br>
+  <h1 id="your-listing">Your listings</h1>
+<br>
     <div class="row">
       <% current_user.plots.each do |plot| %>
          <div class="col-sx-12 col-sm-6 col-md-4 col-lg-4">
@@ -85,13 +86,6 @@
           </div>
       <% end %>
     </div>
-
- <!--  <% current_user.plots.each do |plot| %>
-    <% if policy(plot).edit? %>
-      <%= link_to "Update", edit_plot_path(plot) %>
-    <% end %>
-  <% end %> -->
-
 </div>
 
 

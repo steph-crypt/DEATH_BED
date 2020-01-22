@@ -1,9 +1,9 @@
-.form-control-index {
-  background-color: #95a0b785;
+.navbar-search .form-control-index {
+  background-color: #ffffff;
   color: #3b3d44;
   position: relative;
   top: 20px;
-  left: -55px;
+  left: -36px;
   display: block;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
@@ -18,35 +18,47 @@
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.m-0 {
+.navbar-search .m-0 {
   padding-bottom: 28px;
 }
 
-.search-bar {
+.navbar-search .search-bar {
   width: 100%;
   margin-bottom: 50px;
   .algolia-places {
     width: 56% !important;
   }
-  form {
-    width: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 10px;
-  }
+  // .navbar-search form {
+  //   width: 40%;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-around;
+  //   margin-left: 5px;
+  //   margin-right: 5px;
+  //   padding: 10px;
+  // }
 
-  .ap-input-icon svg {
-    fill: #ffffff;
-    position: absolute;
-    top: 99%;
-    right: 47px;
+ .ap-input-icon button {
+  background: transparent;
+  position: absolute;
+  right: 46px;
+  outline: none;
+  top: 36px;
 }
 }
 
-.btn-search {
+
+// .ap-icon-pin {
+//   fill: #cfcfcf;
+//   position: absolute;
+//   top: 100%;
+//   right: 45px;
+//   -webkit-transform: translateY(-50%);
+//   transform: translateY(-50%);
+
+// }
+
+.btn-search-nav {
   position: relative;
   top: 14px;
   right: 19px;
@@ -55,18 +67,18 @@
   padding-right: 25px;
 }
 
-.btn-primary {
+.btn-primary-nav {
   position: relative;
   top: -18px;
-  left: 262px;
+  left: 278px;
   color: #fff;
-  background-color: #86a1c3;
-  border-color: black;
+  background-color: #000306;
+  border: 1px solid black;
   border-radius: 3px;
   transition: color 1s ease-in-out, background-color 1s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+.btn-primary-nav:hover, .btn-primary-nav:focus, .btn-primary-nav:active, .btn-primary-nav.active {
     color: black;
     background-color: white;
     border-color: gray;

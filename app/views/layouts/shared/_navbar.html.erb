@@ -5,18 +5,21 @@
       <p>Death Bed</p>
     </div>
   </a>
+
+   <div class="navbar-search">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
     <%= form_tag(plots_path, method: :get) do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control-index",
-        placeholder: "Find a Plot"
-      %>
-      <%= submit_tag "Search", class: "btn-search btn-primary" %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control-index",
+          placeholder: "Find a Plot"
+        %>
+      <%= submit_tag "Search", class: "btn-search-nav btn-primary-nav" %>
     <% end %>
+  </div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -47,5 +50,9 @@
       </li>
     </ul>
   </div>
+ </div>
+
+ <div class="search-bar-hidden">
+
  </div>
 
