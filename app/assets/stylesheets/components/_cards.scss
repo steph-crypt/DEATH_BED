@@ -71,7 +71,9 @@
 }
 
 .card-product h2 {
-  font-size: 19px;
+  font-family: 'Grand Hotel', cursive;
+  font-size: 30px;
+  font-style: italic;
   font-weight: bold;
   color: #64686d;
 }
@@ -89,7 +91,7 @@
 .card-product .card-product-infos {
   padding: 44px;
   position: relative;
-  bottom: 10px;
+  bottom: 20px;
   height: 112px;
   text-align: center;
 }
