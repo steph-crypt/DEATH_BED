@@ -11,7 +11,13 @@
     <%= stylesheet_pack_tag 'application', media: 'all' %>
   </head>
   <body>
-    <%= render 'layouts/shared/navbar' %>
+
+    <% if content_for? :nav %>
+      <%= render 'layouts/shared/navbar_home' %>
+    <% else %>
+     <%= render 'layouts/shared/navbar' %>
+    <% end %>
+
     <div class="style">
       <%= yield %>
     </div>
