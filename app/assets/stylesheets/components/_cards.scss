@@ -1,52 +1,126 @@
+// .card-product h2 {
+//   font-size: 16px;
+//   font-weight: bold;
+//   margin: 0;
+
+// }
+
+// .card-product h2 a {
+//   color: rgba(50,50,50, .5);
+// }
+
+
+// .card-product p {
+//   font-size: 12px;
+//   line-height: 1.4;
+//   opacity: .7;
+//   margin-bottom: 0;
+//   margin-top: 8px;
+//   font-weight: bold;
+//   color: rgba(100,100,100,.5);
+// }
+
+
+// .card-product a {
+//     color: #898d92;
+//     text-decoration: none;
+//     background-color: transparent;
+// }
+
+// .card-product .card-product-infos {
+//   padding: 16px;
+// }
+
+//
 .card-product {
   overflow: hidden;
-  height: 440px;
   background: white;
-  box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  margin: 20px 5px;
-  border-radius: 13px !important;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 310px;
+  margin-top: 40px;
+  margin-left: 20px;
   border: 3px solid rgba(100, 100, 100, 0.2);
+  border-radius: 13px !important;
 }
 
 
-.card-product img {
+.card-product > img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-family: 'Grand Hotel', cursive;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+  color: #000000
+}
+
+.card-product p {
+  font-size: 12px;
+  opacity: .7;
+  margin-top: -25px;
+}
+
+.card-product a {
+  color: #000000;
+}
+
+.card-product .card-product-infos {
+  padding: 44px;
+  position: relative;
+  bottom: 20px;
+  height: 112px;
+  text-align: center;
+}
+
+.card-product .card-booking-infos p {
+  color: #5b5f63;
+  margin-top: -4px;
+}
+
+.current-booking-options p {
+  color: #5b5f63;
+}
+
+.review-notice-card {
+  overflow: hidden;
+  height: 210px;
+  background: white;
+  display: flex;
+  margin: 30px 5px;
+  border-radius: 13px!important;
+  border: 3px solid rgba(100, 100, 100, 0.2);
+}
+
+.review-notice-card h3 {
+  margin-top: 25px;
+}
+
+.review-notice-card img {
   height: 100%;
   width: 223px;
   object-fit: cover;
 }
 
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-
+.review-notice-infos {
+  padding: 44px;
+  position: relative;
+  bottom: 32px;
+  height: 112px;
+  text-align: left;
 }
 
-.card-product h2 a {
-  color: rgba(50,50,50, .5);
+.review-notice-infos a {
+  color: #8d8f92;
 }
 
-
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-  font-weight: bold;
-  color: rgba(100,100,100,.5);
-}
-
-
-.card-product a {
-    color: #898d92;
-    text-decoration: none;
-    background-color: transparent;
-}
-
-.card-product .card-product-infos {
-  padding: 16px;
+.review-notice-infos strong {
+  font-family: 'Grand Hotel', cursive;
+  font-style: italic;
+  font-size: 33px;
+  letter-spacing: 2px;
 }
 

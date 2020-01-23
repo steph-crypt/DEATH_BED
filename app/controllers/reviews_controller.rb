@@ -22,16 +22,21 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-    set_booking
     set_review
-    if @review.destroy
+    set_booking
+    set_plot
+    @booking.review.destroy
+    if @booking.review.destroy
       redirect_to user_path, notice: "Review was successfully Deleted"
       authorize @review
     end
-
   end
 
   private
+
+  def set_plot
+    @plot = Plot.find(params[:id])
+  end
 
   def set_review
     @review = Review.find(params[:id])
