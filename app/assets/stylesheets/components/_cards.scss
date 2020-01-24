@@ -20,7 +20,8 @@
   font-size: 30px;
   font-style: italic;
   font-weight: bold;
-  color: #000000
+  color: #000000;
+  text-align: center;
 }
 
 .card-product p {
@@ -44,10 +45,8 @@
 .card-product .card-booking-infos p {
   color: #5b5f63;
   margin-top: -4px;
-}
+  text-align: center;
 
-.current-booking-options p {
-  color: #5b5f63;
 }
 
 .review-notice-card {
