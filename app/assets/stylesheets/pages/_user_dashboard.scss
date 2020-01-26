@@ -21,23 +21,3 @@
     justify-content: left;
     display: flex;
   }
-
-.card-booking-infos {
-  display:flex;
-  //align-items: center;
-  padding: 0 0 0 10px;
-}
-
-.dashboard-card {
-  height: 330px;
-  width: 100%;
-}
-
-.dashboard-card-background {
-  height: 250px;
-  background: $white;
-  border-radius: 5px;
-  padding-top: 20px;
-  border: 1px solid $black;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-}
