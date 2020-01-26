@@ -46,25 +46,7 @@
         </tr>
       </tbody>
     </table>
-      <tr>
-        <th scope="row">Last Name</th>
-        <td><%= current_user.last_name %></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="user-image">
-    <%= cl_image_tag(@user.photo) %>
-  </div>
-
-<br>
-
-  <%= link_to "Edit Profile", edit_user_registration_path(current_user[:id]) %>
-<br>
-  <h1 id="your-booking">Your bookings</h1>
-  <div class="row">
-    <% current_user.bookings.each do |booking| %>
-
+      
     <div class="row">
         <div class="col-sx-12 col-sm-6 col-md-6 col-lg-4">
         <% current_user.bookings.each do |booking| %>
