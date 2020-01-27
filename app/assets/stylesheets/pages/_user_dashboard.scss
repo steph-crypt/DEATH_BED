@@ -1,0 +1,23 @@
+.dashboard-container {
+  margin-top: 15px;
+}
+
+  a .fa-pencil-alt {
+    font-size: 15px;
+    vertical-align: 5px;
+  }
+
+  a .fas {
+    color:#e5dfdf;
+    transition: .05s ease;
+    margin: 0px 10px;
+  }
+
+  a:hover .fas {
+    color: #000306;
+  }
+
+  .row {
+    justify-content: left;
+    display: flex;
+  }
