@@ -72,7 +72,7 @@
           <% current_user.plots.each do |plot| %>
                 <div class="card-product">
                   <%= cl_image_tag plot.photo %>
-                  <div class="card-product-infos">
+                  <div class="card-booking-infos">
                     <h2><%= link_to plot.name, plot_path(plot) %></h2>
                     <p><strong>Price per 10 Years:</strong> $<%= plot.price %></p>
                     <div class="current-booking-options">
@@ -81,9 +81,9 @@
                   </div>
                   </div>
                 </div>
-              </div>
-          <% end %>
 
+          <% end %>
+      </div>
   </div>
 </div>
 
