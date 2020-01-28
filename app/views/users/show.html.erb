@@ -22,31 +22,31 @@
           </div>
         <% end %>
 
-    <table class="table mt-5">
-      <thead>
-        <tr>
-          <th scope="col">General Information</th>
-          <th scope="col"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">Email</th>
-          <td><%= current_user.email %></td>
-        </tr>
+      <table class="table mt-5">
+        <thead>
+          <tr>
+            <th scope="col">General Information</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Email</th>
+            <td><%= current_user.email %></td>
+          </tr>
 
-        <tr>
-          <th scope="row">First Name</th>
-          <td><%= current_user.first_name %></td>
-        </tr>
+          <tr>
+            <th scope="row">First Name</th>
+            <td><%= current_user.first_name %></td>
+          </tr>
 
-        <tr>
-          <th scope="row">Last Name</th>
-          <td><%= current_user.last_name %></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+          <tr>
+            <th scope="row">Last Name</th>
+            <td><%= current_user.last_name %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="row">
       <div class="col-sx-12 col-sm-6 col-md-6 col-lg-4">
@@ -70,20 +70,21 @@
       <div class="col-sx-12 col-sm-6 col-md-4 col-lg-4">
         <h1>Your listings</h1>
         <% current_user.plots.each do |plot| %>
-              <div class="card-product">
-                <%= cl_image_tag plot.photo %>
-                <div class="card-booking-infos">
-                  <h2><%= link_to plot.name, plot_path(plot) %></h2>
-                  <p><strong>Price per 10 Years:</strong> $<%= plot.price %></p>
-                  <div class="current-booking-options">
-                  <p><%= link_to "Modify", edit_plot_path(plot) %></p>
-                  <p><%= link_to "Remove", plot_path(plot),  method: :delete %></p>
-                </div>
-                </div>
-              </div>
+          <div class="card-product">
+            <%= cl_image_tag plot.photo %>
+            <div class="card-booking-infos">
+              <h2><%= link_to plot.name, plot_path(plot) %></h2>
+              <p><strong>Price per 10 Years:</strong> $<%= plot.price %></p>
+              <div class="current-booking-options">
+              <p><%= link_to "Modify", edit_plot_path(plot) %></p>
+              <p><%= link_to "Remove", plot_path(plot),  method: :delete %></p>
+            </div>
+            </div>
+          </div>
         <% end %>
       </div>
   </div>
+</div>
 </div>
 
 
