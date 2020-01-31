@@ -76,9 +76,9 @@
               <h2><%= link_to plot.name, plot_path(plot) %></h2>
               <p><strong>Price per 10 Years:</strong> $<%= plot.price %></p>
               <div class="current-booking-options">
-              <p><%= link_to "Modify", edit_plot_path(plot) %></p>
-              <p><%= link_to "Remove", plot_path(plot),  method: :delete %></p>
-            </div>
+                <p><%= link_to "Modify", edit_plot_path(plot) %></p>
+                <p><%= link_to "Remove", plot_path(plot),  method: :delete %></p>
+              </div>
             </div>
           </div>
         <% end %>
