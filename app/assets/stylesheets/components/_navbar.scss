@@ -1,7 +1,8 @@
 .navbar-lewagon {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
   background: $white;
-  // #61708e;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -24,11 +25,8 @@
  }
 }
 
-.btn-search-nav {
-    position: relative;
-    top: -18px!important;
-    left: 279px;
-    padding: 6px;
-    padding-left: 25px;
-    padding-right: 25px;
+.nav-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around
 }
