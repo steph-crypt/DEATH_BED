@@ -69,6 +69,7 @@ class PlotsController < ApplicationController
     set_plot
     @plot.destroy
     redirect_to user_path(current_user), notice: "Plot was successfully removed"
+    authorize @plot
   end
 
   private
@@ -84,7 +85,7 @@ class PlotsController < ApplicationController
   def check_plot
     set_plot
     if @plot.bookings
-      redirect_to user_path(current_user), notice: "Plot cannot be removed, it has at least open reservation"
+      redirect_to user_path(current_user), notice: "Plot cannot be removed, it has at least one open reservation"
     end
   end
 end

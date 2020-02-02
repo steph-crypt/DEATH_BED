@@ -17,8 +17,16 @@ class PlotPolicy < ApplicationPolicy
     return true
   end
 
+  def new?
+    create?
+  end
+
   def update?
     record.user == user
+  end
+
+  def edit?
+    update?
   end
 
   def destroy?

@@ -32,3 +32,12 @@
     padding-left: 25px;
     padding-right: 25px;
 }
+
+.ap-input-icon svg {
+    fill: #cfcfcf;
+    position: absolute;
+    top: 100%;
+    right: 34;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
