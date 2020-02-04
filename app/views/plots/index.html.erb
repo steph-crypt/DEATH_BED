@@ -1,24 +1,13 @@
-<div class="search-bar">
-  <div class="row justify-content-center border-0 m-0">
-      <%= form_tag plots_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find a Plot"
-        %>
-        <%= submit_tag "Search", class: "btn-search btn-primary" %>
-      <% end %>
-  </div>
-</div>
-
 <div class="container">
-  <h1>Plots Available in Your Area</h1>
+  <div class="header">Plots Near You! </div>
   <div class="row">
     <% @plots.each do |plot| %>
 
         <div class="col-sx-12 col-sm-6 col-md-4 col-lg-4">
           <div class="card-product">
-            <%= cl_image_tag(plot.photo) %>
+            <%= link_to plot_path(plot) do %>
+              <%= cl_image_tag(plot.photo) %>
+            <% end %>
             <div class="card-product-infos">
               <h2><%= link_to plot.name, plot_path(plot) %></h2>
             </br>

@@ -1,17 +1,30 @@
+.container {
+  border: 1px solid, $black;
+}
+
 .plot-banner {
   height: 550px;
   width: 100%;
+  background-color: $white;
 
-  img {
-    height: 550px;
-  }
 
-  .card {
-    height: 550px;
-  }
+img {
+  height: 550px;
+  max-width: 555px;
+  border-top-left-radius: 215px;
+}
+
+.card {
+  height: 550px;
+  max-width: 555px;
+  border-top-right-radius: 228px;
+}
+}
+
+.bg-light {
+  background-color: $white!important;
 }
 
 #map {
-  // border: 1px solid rgba(0,0,0,.4);
   margin: 10px 0px;
 }

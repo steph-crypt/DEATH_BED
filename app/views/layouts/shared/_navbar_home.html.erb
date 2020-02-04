@@ -5,28 +5,16 @@
       <p>Death Bed</p>
     </div>
   </a>
-
-   <div class="navbar-search">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-      <div class="nav-form">
-        <%= form_tag(plots_path, method: :get) do %>
-            <%= text_field_tag :query,
-              params[:query],
-              class: "form-control-index",
-              placeholder: "Find a Plot"
-            %>
-          <%= submit_tag "Search", class: "btn-search-nav btn-primary-nav" %>
-        <% end %>
-      </div>
-  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="/">Home</a>
       </li>
+
   <% if user_signed_in? %>
       <li class="nav-item">
          <%= link_to "Add a Plot", new_plot_path,  class:"nav-link" %>
@@ -40,6 +28,7 @@
       </li>
     <% end %>
 
+
       <li class="nav-item dropdown">
         <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://maxcdn.icons8.com/Share/icon/p1em/Healthcare/skull1600.png" />
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -52,8 +41,3 @@
     </ul>
   </div>
  </div>
-
- <div class="search-bar-hidden">
-
- </div>
-

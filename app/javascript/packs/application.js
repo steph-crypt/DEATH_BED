@@ -10,3 +10,15 @@ initMapbox();
 
 window.initAutocomplete = initAutocomplete
 initAutocomplete()
+
+import { initStarRating } from '../plugins/init_star_rating';
+
+initStarRating();
+
+const searchHomePage = document.querySelector('.search-bar-hidden')
+
+if (searchHomePage) {
+  const algoliaIcon = document.querySelector('.ap-icon-pin')
+  algoliaIcon.style.top = '35px'
+  algoliaIcon.style.right = '45px'
+}

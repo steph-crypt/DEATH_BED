@@ -1,0 +1,14 @@
+<div class="container-form">
+  <%= simple_form_for([@booking, @review]) do |f| %>
+  <div class="form-box">
+      <div class="left">
+        <%= f.input :satisfaction, label: "How satisfied are you with your DeathBed?", collection: (1..5).to_a, class:"margin-bottom:0px;" %>
+       <div class="comments"><%= f.input :comments, label: "Comments about #{@booking.plot.name} or the afterlife...", as: :text %></div>
+      <div class="btn-form">
+        <%= f.submit "Send your review" %>
+      </div>
+      </div>
+  </div>
+  <% end %>
+</div>
+

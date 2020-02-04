@@ -1,8 +1,17 @@
 // Specific CSS for your home-page
 body {
-  background-color: #fff;
+  background-color: $white;
   /** background-image:
   url('https://cdn1.vectorstock.com/i/1000x1000/36/45/floral-backgrounds-with-hand-drawn-flowers-and-vector-13723645.jpg');
     background-size: cover; */
 
+}
+
+.ap-input-icon svg {
+    fill: #cfcfcf;
+    position: absolute;
+    top: 70%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }

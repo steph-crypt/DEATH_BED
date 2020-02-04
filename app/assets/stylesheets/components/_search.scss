@@ -1,37 +1,66 @@
-.search-bar {
+.navbar-search .form-control-index {
+  background-color: #ffffff;
+  color: #3b3d44;
+  position: relative;
+  top: 20px;
+  left: -36px;
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-clip: padding-box;
   border: 1px solid black;
+  border-radius: 3px;
+  -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.m-0 {
+.navbar-search .m-0 {
   padding-bottom: 28px;
 }
 
-.form-control {
-  display: inline-block;
-  padding: 20px;
+.navbar-search .search-bar {
+  width: 100%;
+  margin-bottom: 50px;
+  .algolia-places {
+    width: 56% !important;
+  }
+
+ .ap-input-icon button {
+  background: transparent;
+  position: absolute;
+  right: 46px;
+  outline: none;
+  top: 36px;
+}
 }
 
-.btn-search {
-  margin-top: 0px;
-  margin-left: 10px;
-  margin-bottom: 4px;
-  padding: 7px;
+.btn-search-nav {
+  position: relative;
+  top: 14px;
+  right: 19px;
+  padding: 6px;
   padding-left: 25px;
   padding-right: 25px;
 }
 
-.btn-primary {
-  color: #000;
-  background-color: #ffffff;
-  border-color: #C7CEE3;
+.btn-primary-nav {
+  position: relative;
+  top: -18px;
+  left: 278px;
+  color: #fff;
+  background-color: #000306;
+  border: 1px solid $black;
+  border-radius: 3px;
+  transition: color 1s ease-in-out, background-color 1s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.ap-input-icon svg {
-    fill: #cfcfcf;
-    position: absolute;
-    top: 70%;
-    right: 0;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    padding-top: -17px;
+.btn-primary-nav:hover, .btn-primary-nav:focus, .btn-primary-nav:active, .btn-primary-nav.active {
+    color: $black;
+    background-color: $white;
+    border-color: $gray;
 }
+

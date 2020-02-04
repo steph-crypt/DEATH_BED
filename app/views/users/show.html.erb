@@ -1,41 +1,60 @@
 <div class="container">
-  <h1 class="">Hello <%= current_user.first_name %></h1>
+  <div class="dashboard-container">
+    <br>
+    <h1 class="">Hello <%= current_user.first_name %><%= link_to edit_user_registration_path(current_user[:id]) do %><i class="fas fa-pencil-alt">  Edit Profile</i>
+    <% end %></h1>
 
-  <table class="table mt-5">
-    <thead>
-      <tr>
-        <th scope="col">General Information</th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">Email</th>
-        <td><%= current_user.email %></td>
-      </tr>
+    <div class="row">
+        <% if @unreviewed_bookings != [] %>
+          <div class="col-sx-12 col-sm-12 col-md-10 col-lg-10">
 
-      <tr>
-        <th scope="row">First Name</th>
-        <td><%= current_user.first_name %></td>
-      </tr>
+            <% @unreviewed_bookings.each do |booking| %>
+              <div class="review-notice-card">
+                <%= cl_image_tag(booking.plot.photo) %>
+                <div class="review-notice-infos">
+                  <h3><%= booking.user.first_name %>, <strong><%= link_to booking.plot.name , new_booking_review_path(booking) %></strong> is your home for <%= (Date.parse(booking.start_date.to_s) - Date.parse(booking.end_date.to_s)).to_i %> earth days </h3>
+                  <p class="pl-0">If you died, tell us how it's going!</p>
+                 <%= link_to "Review Now", new_booking_review_path(booking), class:"btn-fun btn-dark-solid" %>
+                </div>
+              </div>
+            <% end %>
 
-      <tr>
-        <th scope="row">Last Name</th>
-        <td><%= current_user.last_name %></td>
-      </tr>
-    </tbody>
-  </table>
+          </div>
+        <% end %>
 
-  <%= link_to "Edit Profile", edit_user_registration_path(current_user[:id]) %>
+      <table class="table mt-5">
+        <thead>
+          <tr>
+            <th scope="col">General Information</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Email</th>
+            <td><%= current_user.email %></td>
+          </tr>
 
-  <h1>Your bookings</h1>
-  <div class="row">
-    <% current_user.bookings.each do |booking| %>
+          <tr>
+            <th scope="row">First Name</th>
+            <td><%= current_user.first_name %></td>
+          </tr>
 
-        <div class="col-sx-12 col-sm-6 col-md-6 col-lg-4">
+          <tr>
+            <th scope="row">Last Name</th>
+            <td><%= current_user.last_name %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row">
+      <div class="col-sx-12 col-sm-6 col-md-6 col-lg-4">
+      <h1>Your bookings</h1>
+      <% current_user.bookings.each do |booking| %>
           <div class="card-product">
             <%= cl_image_tag booking.plot.photo %>
-            <div class="card-product-infos">
+            <div class="card-booking-infos">
               <h2><%= link_to booking.plot.name, plot_path(booking.plot) %></h2>
               <p> <strong>Start Date:</strong> <%= booking.start_date %></p>
               <p><strong>Total Price:</strong> $<%= booking.plot.price * (booking.date_range / 10) %></p>
@@ -45,36 +64,29 @@
               </div>
             </div>
           </div>
-        </div>
-    <% end %>
-  </div>
+        <% end %>
+      </div>
 
-  <h1>Your listings</h1>
-    <div class="row">
-      <% current_user.plots.each do |plot| %>
-         <div class="col-sx-12 col-sm-6 col-md-4 col-lg-4">
-            <div class="card-product">
-              <%= cl_image_tag plot.photo %>
-              <div class="card-product-infos">
-                <h2><%= link_to plot.name, plot_path(plot) %></h2>
-                <p><strong>Price per 10 Years:</strong> $<%= plot.price %></p>
-                <div class="current-booking-options">
+      <div class="col-sx-12 col-sm-6 col-md-4 col-lg-4">
+        <h1>Your listings</h1>
+        <% current_user.plots.each do |plot| %>
+          <div class="card-product">
+            <%= cl_image_tag plot.photo %>
+            <div class="card-booking-infos">
+              <h2><%= link_to plot.name, plot_path(plot) %></h2>
+              <p><strong>Price per 10 Years:</strong> $<%= plot.price %></p>
+              <div class="current-booking-options">
                 <p><%= link_to "Modify", edit_plot_path(plot) %></p>
                 <p><%= link_to "Remove", plot_path(plot),  method: :delete %></p>
               </div>
-              </div>
             </div>
           </div>
-      <% end %>
-    </div>
-
- <!--  <% current_user.plots.each do |plot| %>
-    <% if policy(plot).edit? %>
-      <%= link_to "Update", edit_plot_path(plot) %>
-    <% end %>
-  <% end %> -->
-
+        <% end %>
+      </div>
+  </div>
 </div>
+</div>
+
 
 
 

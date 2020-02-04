@@ -1,30 +1,15 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(http://api.ning.com/files/kV4MbYiv7oStHUX0rm0MiV-YC-0Fpdw2toXkg*s2CBvczBakTz*Osx63lKgO48mBdyPT7o7-JMw-Cf59KXxt3KK46oKW561I/1082056507.jpeg);">
-  <div class="container banner-header">
+  <div class="banner-container banner-header">
     <h1><strong>Plot</strong> your revenge</h1>
-    <p>If you like sleep, you'll <strong>love</strong> death.</p>
-    <div class="search-form">
-    <%= form_tag plots_path, method: :get do %>
-      <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Search by location, etc..." %>
-      <%= submit_tag "Search Graves", class: "btn btn-light" %>
-    <% end %>
+      <p>If you like sleep, you'll <strong>love</strong> death.</p>
+      <div class="search-form">
+        <%= form_tag plots_path, method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+          class: "banner-form-control",
+          placeholder: "Enter location" %>
+          <%= submit_tag "Search Graves", class: "btn btn-light" %>
+        <% end %>
+      </div>
     </div>
-  </div>
 </div>
-
-<!-- <div class="flash flash-success alert alert-dismissible fade show" role="alert">
-  <span><strong>Yay!</strong> you successfully signed in to our service.</span>
-  <a data-dismiss="alert" aria-label="Close">
-    <i class="fas fa-times"></i>
-  </a>
-</div>s
- <div class="flash flash-warning alert alert-dismissible fade show" role="alert">
-  <span><strong>Mmh</strong> seems like you don't have <a href="#">profile picture</a> yet.</span>
-  <a data-dismiss="alert" aria-label="Close">
-    <i class="fas fa-times"></i>
-  </a>
-</div>
-
- -->

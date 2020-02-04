@@ -23,7 +23,15 @@ class PlotsController < ApplicationController
     set_plot
     authorize @plot
     @user = @plot.user
+    @booking = @plot.bookings
+    @review = @plot.reviews
     @markers = [{ lat: @plot.latitude, lng: @plot.longitude }]
+
+    if @review.blank?
+      @avg_review = 0
+    else
+      @avg_review = @plot.reviews.average(:satisfaction).round(2)
+    end
   end
 
   def new
@@ -77,7 +85,7 @@ class PlotsController < ApplicationController
   def check_plot
     set_plot
     if @plot.bookings
-      redirect_to user_path(current_user), notice: "Plot cannot be removed, it has at least open reservation"
+      redirect_to user_path(current_user), notice: "Plot cannot be removed, it has at least one open reservation"
     end
   end
 end

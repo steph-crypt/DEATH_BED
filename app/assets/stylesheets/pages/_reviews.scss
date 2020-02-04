@@ -1,0 +1,48 @@
+.container-review-first {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.col-md-6 {
+  padding-right: 50px;
+  padding-left: 57px;
+}
+
+.left {
+  border: 1px solid $black;
+  border-radius: 10px;
+  padding: 35px;
+}
+
+.left h1 {
+  font-family: $fifties-font;
+  font-size: 50px;
+  font-style: italic;
+  text-align: center;
+}
+
+.left body {
+  text-align: center;
+}
+
+.plot-name {
+  font-family: $fifties-font;
+  font-size: 50px;
+  font-style: italic;
+  text-align: center;
+}
+
+.show-img-container img {
+  max-width: 512px;
+  max-height: 343px;
+  border-radius: 10px;
+}
+
+.detail-right h3 {
+  padding-top: 64px;
+  padding-bottom: 3px;
+  font-size: 50px;
+  font-family: $fifties-font;
+  font-style: italic;
+}
