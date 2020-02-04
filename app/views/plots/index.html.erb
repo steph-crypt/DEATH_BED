@@ -5,7 +5,9 @@
 
         <div class="col-sx-12 col-sm-6 col-md-4 col-lg-4">
           <div class="card-product">
-            <%= cl_image_tag(plot.photo) %>
+            <%= link_to plot_path(plot) do %>
+              <%= cl_image_tag(plot.photo) %>
+            <% end %>
             <div class="card-product-infos">
               <h2><%= link_to plot.name, plot_path(plot) %></h2>
             </br>

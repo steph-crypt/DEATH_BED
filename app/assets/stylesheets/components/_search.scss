@@ -53,14 +53,14 @@
   left: 278px;
   color: #fff;
   background-color: #000306;
-  border: 1px solid black;
+  border: 1px solid $black;
   border-radius: 3px;
   transition: color 1s ease-in-out, background-color 1s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .btn-primary-nav:hover, .btn-primary-nav:focus, .btn-primary-nav:active, .btn-primary-nav.active {
-    color: black;
-    background-color: white;
-    border-color: gray;
+    color: $black;
+    background-color: $white;
+    border-color: $gray;
 }
 

@@ -1,8 +1,13 @@
 .header {
-  font-family: 'Grand Hotel', cursive;
+  font-family: $fifties-font;
   font-style: italic;
   font-size: 60px;
   text-align: center;
+  border-top: 3px solid $tomb-gray;
+  border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
+  padding-top: 45px;
+
 }
 
 // #your-booking {

@@ -28,19 +28,19 @@ p3 = Plot.new(name: "Buried Alive", description: "As fun as it sounds!", locatio
 p1 = Plot.new(name: "Glorious", description: "Dare to haunt the echoing chambers of this mausoluem and beyond. Fits many!", location:"Hamburg, Germany", price: 105)
 
 p4 = Plot.new(name: "Lion's Heart", description: "The stone-carved lion is over 200 years-old. Let the value you or a loved-one had as a
- living person be be captured by the heart-wrenching grief of this crying lion tomb.", location:"Hamburg, Germany", price: 155)
+ living person be captured by the heart-wrenching grief of this crying lion tomb.", location:"Hamburg, Germany", price: 155)
 
 p5 = Plot.new(name: "The Whisperers", description: "There are strange things in these woods— or so it is whispered.
-  Listen closely, and maybe you will here them.", location:"Stansdorf, Germany", price: 200)
+  Listen closely, and maybe you will hear...", location:"Stansdorf, Germany", price: 200)
 
 p6 = Plot.new(name: "Kingdom by The Sea", description: "This quiant sea-side tomb is submerged in a perenial fog
   and haunted impeccably by the ghosts of the surrounding graves.", location:"Munich, Germany", price: 220)
 
 p7 = Plot.new(name: "Rainbow Bridge", description: "These beautiful floral graves are a joyous celebration of
- the great cosmic, swirling, unknown.", location:"Bern, Switzerland", price: 95)
+ the great cosmic, swirling, unknown.", location:"Munich, Germany", price: 95)
 
 p8 = Plot.new(name: "Last Train to Glory", description: "The Arctic trails have their secret tales that would make
- your blood run cold. When it does, be sure to board the Last Train to Glory.", location:"Berlin, Germany", price: 250)
+ your blood run cold. When it does, be sure to board the Last Train to Glory to warm your blood.", location:"Berlin, Germany", price: 250)
 
 p9 = Plot.new(name: "Annabelle Lee", description: "For the dearly departed lover, Annabelle Lee represents love that
  was a muse, and a loss that can never be reconciled.", location:"Hamburg, Germany", price: 245)
@@ -48,7 +48,7 @@ p9 = Plot.new(name: "Annabelle Lee", description: "For the dearly departed lover
 p10 = Plot.new(name: "Davey Jones' Locker", description: "Be one of Davey Jones' captured souls!", location:"Nuremberg, Germany", price: 125)
 
 p11 = Plot.new(name: "Swan Tree", description: "Cast off into eternity beneath the the beautiful Swan tree,
- which, legend has it, is always in bloom.", location:"Liepzig, Germany", price: 75)
+ which, legend has it, is forever in bloom.", location:"Liepzig, Germany", price: 75)
 
 p12 = Plot.new(name: "No Tomorrow", description: "Live like there's no tomorrow. And when there actually is no tomorrow,
  die like you lived like there was no tomorrow— in an exquisite ancient-Roman-style crypt.", location:"Berlin, Germany", price: 75)
