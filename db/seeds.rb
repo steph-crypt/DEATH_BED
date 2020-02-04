@@ -47,7 +47,7 @@ p9 = Plot.new(name: "Annabelle Lee", description: "For the dearly departed lover
 
 p10 = Plot.new(name: "Davey Jones' Locker", description: "Be one of Davey Jones' captured souls!", location:"Nuremberg, Germany", price: 125)
 
-p11 = Plot.new(name: "Swan Tree", description: "Cast off into eternity beneath the the beautiful Swan tree,
+p11 = Plot.new(name: "Swan Tree", description: "Cast off into eternity beneath the beautiful Swan tree,
  which, legend has it, is forever in bloom.", location:"Liepzig, Germany", price: 75)
 
 p12 = Plot.new(name: "No Tomorrow", description: "Live like there's no tomorrow. And when there actually is no tomorrow,
