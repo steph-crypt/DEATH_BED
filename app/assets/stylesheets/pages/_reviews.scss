@@ -7,16 +7,16 @@
 .col-md-6 {
   padding-right: 50px;
   padding-left: 57px;
-  }
+}
 
 .left {
-  border: 1px solid black;
+  border: 1px solid $black;
   border-radius: 10px;
   padding: 35px;
 }
 
 .left h1 {
-  font-family: 'Grand Hotel', cursive;
+  font-family: $fifties-font;
   font-size: 50px;
   font-style: italic;
   text-align: center;
@@ -27,7 +27,7 @@
 }
 
 .plot-name {
-  font-family: 'Grand Hotel', cursive;
+  font-family: $fifties-font;
   font-size: 50px;
   font-style: italic;
   text-align: center;
@@ -41,8 +41,8 @@
 
 .detail-right h3 {
   padding-top: 64px;
-    padding-bottom: 3px;
+  padding-bottom: 3px;
   font-size: 50px;
-  font-family: 'Grand Hotel', cursive;
+  font-family: $fifties-font;
   font-style: italic;
 }

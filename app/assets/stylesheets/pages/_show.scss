@@ -3,7 +3,7 @@
 }
 
 .plot-name p  {
-  font-family: 'Grand Hotel', cursive!important;
+  font-family: $fifties-font!important;
   font-size: 60px!important;
   text-align: left!important;
   font-style: italic!important;
@@ -19,7 +19,7 @@
 }
 
 #show-page-reviews h1 {
-  font-family: 'Grand Hotel', cursive;
+  font-family: $fifties-font;
   font-style: italic!important;
   font-size: 65px;
 }

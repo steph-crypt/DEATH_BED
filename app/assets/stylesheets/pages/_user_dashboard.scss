@@ -8,13 +8,13 @@
   }
 
   a .fas {
-    color:#e5dfdf;
+    color: $dark-gray;
     transition: .05s ease;
     margin: 0px 10px;
   }
 
   a:hover .fas {
-    color: #000306;
+    color: $black;
   }
 
   .row {
