@@ -24,6 +24,9 @@ gem 'webpacker'
 gem 'cloudinary', '~>1.9.1'
 gem 'carrierwave', '~> 1.2'
 
+#gem for avatar
+gem 'attachinary'
+
 # gem for geocoding locations
 gem 'geocoder'
 
