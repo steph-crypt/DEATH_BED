@@ -8,5 +8,6 @@ class User < ApplicationRecord
   has_many :reviews, through: :bookings
 
   mount_uploader :photo, PhotoUploader
+  mount_uploader :avatar, AvatarUploader
 
 end
