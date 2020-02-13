@@ -25,6 +25,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user.edit(user_params)
     @user.avatar.attach(params[:avatar])
   end
 
