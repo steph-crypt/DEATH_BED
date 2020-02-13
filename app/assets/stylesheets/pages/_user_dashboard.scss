@@ -8,6 +8,11 @@
 
   }
 
+  #avatar img {
+    height: 20px;
+    max-width: 20px;
+  }
+
   a .fa-pencil-alt {
     font-size: 15px;
     vertical-align: 5px;
@@ -27,3 +32,4 @@
     justify-content: left;
     display: flex;
   }
+

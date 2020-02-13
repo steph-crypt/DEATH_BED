@@ -3,8 +3,10 @@
     <br>
     <h1 class="">Hello <%= current_user.first_name %><%= link_to edit_user_registration_path(current_user[:id]) do %><i class="fas fa-pencil-alt">  Edit Profile</i>
     <% end %></h1>
-    <div class="col-6">
-      <%= cl_image_tag(@user.avatar) %>
+    <div class="col-6" id="avatar">
+      <%#= if @user.avatar.attached? %>
+        <!-- <img src="<%=(cl_image_tag(@user.avatar)) %>"> -->
+      <%#= end %>
     </div>
 
     <div class="row">
