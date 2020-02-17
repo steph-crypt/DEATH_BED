@@ -26,11 +26,11 @@ class UsersController < ApplicationController
 
   def edit
     @user.edit(user_params)
-    @user.avatar.attach(params[:avatar])
   end
 
   def update
     @user.update(user_params)
+    @user.avatar.attach(params[:avatar])
     redirect_to user_path(current_user)
   end
 
