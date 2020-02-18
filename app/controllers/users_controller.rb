@@ -30,7 +30,7 @@ class UsersController < ApplicationController
 
   def update
     @user.update(user_params)
-    @user.avatar.attach(params[:avatar])
+    @user.update_attribute(:avatar, params[:user][:avatar])
     redirect_to user_path(current_user)
   end
 
