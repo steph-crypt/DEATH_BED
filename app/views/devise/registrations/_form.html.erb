@@ -21,7 +21,11 @@
       <%= f.input :password_confirmation,
                   required: true,
                   input_html: { autocomplete: "new-password" } %>
-      <%= f.file_field :avatar, class: 'form-control' %>
+      <%= f.label :avatar do %>
+      <%= f.file_field :avatar %>
+      <%= f.hidden_field :avatar_cache %>
+      <% end %>
+      <%#= f.file_field :avatar, class: 'form-control' %>
       <%#= f.hidden_field :avatar_cache %>
     </div>
 
