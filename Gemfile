@@ -17,7 +17,6 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
-gem 'gravatar_image_tag'
 
 #gm for date picker
 
