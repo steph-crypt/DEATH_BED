@@ -25,10 +25,12 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user.edit(user_params)
   end
 
   def update
     @user.update(user_params)
+    @user.update_attribute(:avatar, params[:user][:avatar])
     redirect_to user_path(current_user)
   end
 
@@ -40,5 +42,6 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name, :avatar)
+    current_user.avatar.attach(params[:avatar])
   end
 end

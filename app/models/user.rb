@@ -9,7 +9,4 @@ class User < ApplicationRecord
   has_many :reviews, through: :bookings
   has_one_attached :avatar
 
-  mount_uploader :photo, PhotoUploader
-
-
 end

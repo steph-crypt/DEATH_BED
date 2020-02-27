@@ -3,8 +3,11 @@
     <br>
     <h1 class="">Hello <%= current_user.first_name %><%= link_to edit_user_registration_path(current_user[:id]) do %><i class="fas fa-pencil-alt">  Edit Profile</i>
     <% end %></h1>
-    <div class="col-6">
-      <%= cl_image_tag(@user.avatar) %>
+    <div class="wrapper" id="avatar">
+      <% if current_user.avatar.attached? %>
+      <%= image_tag(current_user.avatar) %>
+      <% else %>
+      <% end %>
     </div>
 
     <div class="row">
