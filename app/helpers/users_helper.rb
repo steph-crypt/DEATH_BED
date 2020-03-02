@@ -1,7 +1,7 @@
 module UsersHelper
   def avatar_for(user)
     if user.avatar?
-      image_tag user.avatar.url(:thumb)
+      cl_image_tag(@user.avatar)
     else
       image_tag "skull.png"
     end
