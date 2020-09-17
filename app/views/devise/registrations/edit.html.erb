@@ -26,8 +26,8 @@
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
     <div id="avatar">
-      <% if current_user.avatar.attached? %>
-        <%= image_tag(current_user.avatar) %>
+      <% if current_user.avatar? %>
+        <%= cl_image_tag(current_user.avatar) %>
         <%= f.label :remove_avatar do %>
         <%= f.check_box :remove_avatar %>
         <% end %>
