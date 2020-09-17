@@ -82,7 +82,6 @@ GEM
     geocoder (1.5.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    gravatar_image_tag (1.2.0)
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -231,7 +230,6 @@ DEPENDENCIES
   dotenv-rails
   font-awesome-sass (~> 5.6.1)
   geocoder
-  gravatar_image_tag
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
   pg (~> 0.21)
@@ -254,4 +252,4 @@ RUBY VERSION
    ruby 2.6.3p62
 
 BUNDLED WITH
-   2.0.2
+   2.1.4
