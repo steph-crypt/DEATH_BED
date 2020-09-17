@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :plots
   has_many :reviews, through: :bookings
-  # has_one_attached :avatar
+  has_one_attached :avatar
 
 end
