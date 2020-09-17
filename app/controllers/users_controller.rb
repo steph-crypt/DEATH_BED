@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, only: [:edit, :update]
-  before_action :check_authorization, only: [:edit, :update]
-  before_action :set_user
+
   def show
     set_user
     @plots = Plot.where(user_id: current_user)
@@ -45,11 +43,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name, :avatar)
     current_user.avatar.attach(params[:avatar])
-  end
-
-  def check_authorization
-    unless current_user.id == params[:id].to_i
-      redirect_to root_url
-    end
   end
 end

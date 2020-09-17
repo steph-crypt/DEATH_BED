@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :plots, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
       resources :bookings, only: [:new, :create]
   end
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:show]
   resources :bookings, only: [:index, :edit, :update, :destroy] do
     resources :reviews, except: [:index, :show, :edit, :update]
   end
